@@ -1,0 +1,163 @@
+body {
+  background-color: $bg-dark;
+  color: $primary;
+}
+  .navbar {
+  display: flex;
+  padding: 30px;
+  width: 100%;
+  ul {
+    display: flex;
+    list-style-type: none;
+    a {
+      @include a-tag;
+      color: $primary;
+    }
+  }
+  ul li:not(:last-child) {
+    margin-right: 24px;
+  }
+  .btn {
+    @include button;
+  }
+  }
+  .services {
+  margin-top:3rem;
+  h3 {
+    @include h-3;
+  }
+  h4 {
+    color: $primary;
+    @include h-4;
+    span{
+      display: block;
+    }
+  }
+  .card-listing {
+    display: flex;
+    margin-top: 3rem;
+    .card {
+      background: #000;
+      margin-right: 20px;
+      padding: 30px;
+      max-width: 360px;
+      border: 4px solid transparent;
+      &:hover {
+        background:
+        linear-gradient($bg-dark,$bg-dark) padding-box,
+        linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+        svg {
+          stroke:(45deg,#20D4FE 0%, #B722FF 100%);
+        }
+      }
+      h5 {
+        @include h-5;
+        color: $primary;
+      }
+      p {
+        @include p;
+        color: $primary;
+        max-width: 300px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+        min-height: 98px;
+      } 
+    }
+    .arrow {
+      &:hover {
+        transform: translateX(15px);
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+  a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    @include a-tag;
+    color: $primary;
+    margin: 20px 0px 0px;
+    &:hover {
+      color: $secondary;
+      svg {
+        transform: translateX(15px);
+        transition: 0.2s ease-in;
+      }
+    }
+    svg {
+      margin-left: 5px;
+    }
+  }
+  }
+  .about-us {
+  margin-top: 3rem;
+  .row {
+    align-items: center;
+    .col-left {
+      margin-right: 3rem;
+    }
+  }
+  h3 {
+    @include h-3;
+  }
+  h4 {
+    @include h-4;
+    color: $primary;
+  }
+  p {
+    @include p;
+    color: $primary;
+    max-width: 540px;
+  }
+  .experience {
+    h6 {
+      @include gradient;
+      font-size: 40px;
+      font-weight: 700;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 600;
+      color: $primary;
+    }
+  }
+  .set-us-apart {
+    margin-top: 80px;
+    .set-us-apart-listing {
+      .set-us-apart-item {
+        display: flex;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        .counter {
+          flex: 0 0 60px;
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 500;
+            width: 26px;
+            height: 26px;
+            color: white;
+            background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
+          }
+        }
+        .content {
+          flex: 1;
+          h6 {
+            font-size: 24px;
+            font-weight: 600;
+            color:$primary;
+          }
+          p {
+            max-width: 500px;
+          }
+        }
+      }
+    }
+  }
+  }
+  

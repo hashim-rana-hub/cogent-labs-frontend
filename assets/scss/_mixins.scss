@@ -1,0 +1,37 @@
+@mixin gradient {
+    background: linear-gradient(to right, #20D4FE 0% , #B722FF 15%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin button{
+    background: linear-gradient(to right, #20D4FE 0% , #B722FF 100%);
+    border:none;
+}
+@mixin a-tag {
+    font-size: 24px;
+    font-weight: 500;
+    color: $primary;
+    text-decoration: none;
+  }
+  @mixin p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  @mixin h-3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: $primary;
+    @include gradient;
+  }
+  @mixin h-4 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  @mixin h-5 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  @mixin h-6 {
+    font-size: 24px;
+    font-weight: 700;
+  }
