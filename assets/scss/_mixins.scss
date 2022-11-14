@@ -4,7 +4,7 @@
 	-webkit-text-fill-color: transparent;
 }
 @mixin button{
-    background: linear-gradient(to right, #20D4FE 0% , #B722FF 100%);
+    background: linear-gradient(90.1deg, #20D4FE 0.09%, #B722FF 99.91%);
     border:none;
 }
 @mixin a-tag {
@@ -16,6 +16,10 @@
   @mixin p {
     font-size: 18px;
     font-weight: 400;
+  }
+  h1{
+    font-size: 70px;
+    font-weight: 800;
   }
   @mixin h-3 {
     font-size: 32px;
