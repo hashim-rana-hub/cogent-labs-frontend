@@ -1,3 +1,59 @@
-body{
-    background-color: $bg-dark;
+
+.consultation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    color: $primary;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.4;
+    span {
+      @include gradient;
+      display: block;
+    }
+  }
+  p {
+    color: $primary;
+    max-width: 700px;
+    margin: 0px auto auto;
+  }
+  .btn {
+    @include button;
+    padding: 12px 20px;
+    margin: 35px auto;
+  }
+}
+.images-grid {
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas:
+  'item-1 item-2 item-3'
+  'item-4 item-2 item-5';
+  .item-1 { grid-area: item-1; }
+  .item-2 { grid-area: item-2; }
+  .item-3 { grid-area: item-3; }
+  .item-4 { grid-area: item-4; }
+  .item-5 { grid-area: item-5; }
+  .image{
+    &:hover {
+    opacity: 0.7;
+    }
+  }
+}
+
+
+.portfolio {
+  margin-top: 3rem;
+  .portfolio-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      @include h-3;
+    }
+    h4 {
+      @include h-4;
+    }
+  }
 }
