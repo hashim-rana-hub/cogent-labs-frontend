@@ -1,6 +1,10 @@
 body {
   background-color: $bg-dark;
   color: $primary;
+  // font-family: 'SF Pro Display';
+}
+.container {
+  text-align: center;
 }
   .navbar {
   display: flex;
@@ -159,5 +163,10 @@ body {
       }
     }
   }
-  }
-  
+}
+.contact-us {
+  text-align: left;
+}
+.footer {
+  text-align: left;
+}
