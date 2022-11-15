@@ -1,0 +1,150 @@
+.connection {
+  margin-top: 7rem;
+  border-bottom: 2px solid #FFFFFF40;
+  .heading-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    h1 {
+      display: block;
+      font-size: 64px;
+      font-weight: 700;
+      max-width: 620px;
+      span {
+        @include gradient;
+      }
+    }
+    p {
+      @include p;
+      max-width: 632px;
+    }
+  }
+  .images {
+    display: flex;
+    margin: 6rem 0rem;
+    .img-1 {
+      flex: 0 0 770px;
+    }
+    .img-2 {
+      flex: 1;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.ceo {
+  border-bottom: 2px solid #FFFFFF40;
+  margin-top: 8rem;
+  h5 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  p {
+    @include p;
+  }
+  .we-are-strong {
+    align-items: center;
+    margin-bottom: 4rem;
+    h2 {
+      @include h-2;
+    }
+  }
+  .ceo-sec {
+    align-items: flex-start;
+    margin-top: 6rem;
+    margin-bottom: 11rem;
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+    h4 {
+      font-size: 38px;
+      font-weight: 700;
+    }
+    .ceo-detail {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 5rem;
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.our-work {
+  margin-top: 8.125rem;
+    .snapshot {
+      @include h-3;
+      @include gradient;
+      text-align: center;
+      span {
+        @include span;
+        color: $primary;
+        -webkit-text-fill-color: #ffffff;
+
+      }
+    }
+  .snapshot-projects {
+    margin-top: 6.25rem;
+    .snapshot-projects-list{
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      li:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+.benifits {
+  margin-bottom: 10.5rem;
+  .company-benefits {
+    text-align: center;
+    h3 {
+      @include h-3;
+      @include gradient;
+      margin: 5rem 0rem;
+      span {
+        @include span;
+        color: $primary;
+        -webkit-text-fill-color: #ffffff;
+      }
+    }
+  }
+  .benifits-list {
+    margin-top: 6.25rem;
+    .benifits-detail {
+      display: flex;
+      flex-direction: column;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        h6 {
+          color: $primary;
+          font-size: 40px;
+          background: linear-gradient(180deg, #20D4FE 0% , #B722FF 100%);
+          background-clip: border-box;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      p {
+        @include p;
+        // @include truncate(3);
+        border-bottom: 0.5px solid #7B7B7B;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

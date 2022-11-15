@@ -1,8 +1,8 @@
-
 .consultation {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 8.75rem;
   h1 {
     color: $primary;
     font-size: 60px;
@@ -14,14 +14,15 @@
     }
   }
   p {
-    color: $primary;
-    max-width: 700px;
+    @include p;
+    font-size: 24px;
+    max-width: 1040px;
     margin: 0px auto auto;
   }
   .btn {
     @include button;
     padding: 12px 20px;
-    margin: 35px auto;
+    margin: 35px auto 7.5rem;
   }
 }
 .images-grid {
@@ -42,16 +43,18 @@
   }
 }
 .portfolio {
-  margin-top: 3rem;
+  margin-top: 8.125rem;
   .portfolio-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     h3 {
       @include h-3;
+      @include gradient;
     }
     h4 {
       @include h-4;
+      margin: 2.5rem 0rem 2.5rem;
     }
   }
 }
