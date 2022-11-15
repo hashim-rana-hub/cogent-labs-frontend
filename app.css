@@ -1,11 +1,13 @@
-h1 {
-  font-size: 70px;
-  font-weight: 800;
-}
-
 body {
   background-color: #000;
   color: #FFFFFF;
+}
+
+.subtitle {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 20%) !important;
+  background-clip: border-box;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,12 +29,29 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   text-decoration: none;
   color: #FFFFFF;
+  position: relative;
+}
+.navbar ul a:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+}
+.navbar ul a:hover {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar ul a:hover::after {
+  display: block;
 }
 .navbar ul li:not(:last-child) {
-  margin-right: 1.5rem;
+  margin-right: 24px;
 }
 .navbar .btn {
-  background: linear-gradient(90.1deg, #20D4FE 0.09%, #B722FF 99.91%);
+  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
 }
 
@@ -42,10 +61,6 @@ h1, h2, h3, h4, h5, h6 {
 .services h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFFFFF;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .services h4 {
   color: #FFFFFF;
@@ -71,10 +86,10 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.services .card-listing .card:hover svg stop:first-child {
+.services .card-listing .card:hover svg:hover stop:first-child {
   stop-color: #1EBEE0;
 }
-.services .card-listing .card:hover svg stop:last-child {
+.services .card-listing .card:hover svg:hover stop:last-child {
   stop-color: #952491;
 }
 .services .card-listing .card:not(:last-child) {
@@ -136,10 +151,6 @@ h1, h2, h3, h4, h5, h6 {
 .about-us h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFFFFF;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .about-us h4 {
   font-size: 40px;
@@ -153,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
 }
 .about-us .experience h6 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5rem;
@@ -174,11 +185,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .about-us .set-us-apart h4 {
   margin-top: 0px;
+  margin-bottom: 4.375rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item {
   display: flex;
-  margin-top: 32px;
   margin-left: 16px;
+}
+.about-us .set-us-apart .set-us-apart-listing .set-us-apart-item:not(:last-child) {
+  margin-bottom: 3.125rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .counter {
   flex: 0 0 3.75rem;
@@ -287,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 .consultation h1 span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
@@ -300,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px auto auto;
 }
 .consultation .btn {
-  background: linear-gradient(90.1deg, #20D4FE 0.09%, #B722FF 99.91%);
+  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
   padding: 12px 20px;
   margin: 35px auto 7.5rem;
@@ -341,8 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio .portfolio-header h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFFFFF;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -350,4 +363,172 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 40px;
   font-weight: 700;
   margin: 2.5rem 0rem 2.5rem;
+}
+
+.connection {
+  margin-top: 7rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
+}
+.connection .heading-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.connection .heading-wrapper h1 {
+  display: block;
+  font-size: 64px;
+  font-weight: 700;
+  max-width: 620px;
+}
+.connection .heading-wrapper h1 span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.connection .heading-wrapper p {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 632px;
+}
+.connection .images {
+  display: flex;
+  margin: 6rem 0rem;
+}
+.connection .images .img-1 {
+  flex: 0 0 770px;
+}
+.connection .images .img-2 {
+  flex: 1;
+}
+.connection .images .img-2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.ceo {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
+  margin-top: 8rem;
+}
+.ceo h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.ceo p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.ceo .we-are-strong {
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.ceo .we-are-strong h2 {
+  font-size: 66px;
+  font-weight: 600;
+}
+.ceo .ceo-sec {
+  align-items: flex-start;
+  margin-top: 6rem;
+  margin-bottom: 11rem;
+}
+.ceo .ceo-sec img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.ceo .ceo-sec h4 {
+  font-size: 38px;
+  font-weight: 700;
+}
+.ceo .ceo-sec .ceo-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+.ceo .ceo-sec .ceo-detail h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.ceo .ceo-sec .ceo-detail span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.our-work {
+  margin-top: 8.125rem;
+}
+.our-work .snapshot {
+  font-size: 32px;
+  font-weight: 600;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.our-work .snapshot span {
+  font-size: 40px;
+  font-weight: 700px;
+  display: block;
+  color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
+}
+.our-work .snapshot-projects {
+  margin-top: 6.25rem;
+}
+.our-work .snapshot-projects .snapshot-projects-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.our-work .snapshot-projects .snapshot-projects-list li:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.benifits {
+  margin-bottom: 10.5rem;
+}
+.benifits .company-benefits {
+  text-align: center;
+}
+.benifits .company-benefits h3 {
+  font-size: 32px;
+  font-weight: 600;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5rem 0rem;
+}
+.benifits .company-benefits h3 span {
+  font-size: 40px;
+  font-weight: 700px;
+  display: block;
+  color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
+}
+.benifits .benifits-list {
+  margin-top: 6.25rem;
+}
+.benifits .benifits-list .benifits-detail {
+  display: flex;
+  flex-direction: column;
+}
+.benifits .benifits-list .benifits-detail .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.benifits .benifits-list .benifits-detail .title h6 {
+  color: #FFFFFF;
+  font-size: 40px;
+  background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.benifits .benifits-list .benifits-detail p {
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 0.5px solid #7B7B7B;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=App.css.map */

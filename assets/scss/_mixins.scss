@@ -1,41 +1,63 @@
 @mixin gradient {
-    background: linear-gradient(to right, #20D4FE 0% , #B722FF 15%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #20D4FE 0% , #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @mixin button{
-    background: linear-gradient(90.1deg, #20D4FE 0.09%, #B722FF 99.91%);
-    border:none;
+  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
+  border:none;
 }
 @mixin a-tag {
-    font-size: 24px;
-    font-weight: 500;
-    color: $primary;
-    text-decoration: none;
-  }
-  @mixin p {
-    font-size: 18px;
-    font-weight: 400;
-  }
-  h1{
-    font-size: 70px;
-    font-weight: 800;
-  }
-  @mixin h-3 {
-    font-size: 32px;
-    font-weight: 600;
-    color: $primary;
-    @include gradient;
-  }
-  @mixin h-4 {
-    font-size: 40px;
-    font-weight: 700;
-  }
-  @mixin h-5 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  @mixin h-6 {
-    font-size: 24px;
-    font-weight: 700;
-  }
+  font-size: 24px;
+  font-weight: 500;
+  color: $primary;
+  text-decoration: none;
+}
+@mixin p {
+  font-size: 18px;
+  font-weight: 400;
+}
+  
+@mixin h-1 {
+  font-size: 70px;
+  font-weight: 800;
+}
+@mixin h-2 {
+  font-size: 66px;
+  font-weight: 600;
+}
+@mixin h-3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+@mixin h-4 {
+  font-size: 40px;
+  font-weight: 700;
+}
+@mixin h-5 {
+  font-size: 24px;
+  font-weight: 700;
+}
+@mixin h-6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+@mixin span {
+  font-size: 40px;
+  font-weight: 700px;
+  display: block;
+}
+@mixin truncate($lines,
+  $lh: 1.2,
+  $spacer:0) {
+  line-height: $lh;
+  max-height: $lh * $lines + $spacer + em;
+  // overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

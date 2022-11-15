@@ -2,29 +2,52 @@ body {
   background-color: $bg-dark;
   color: $primary;
 }
+.subtitle{
+  background: linear-gradient(to right, #20D4FE 0% , #B722FF 20%) !important;
+  background-clip: border-box;
+  -webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent;
+}
 h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
-  .navbar {
+.navbar {
+display: flex;
+padding: 1.875rem;
+width: 100%;
+ul {
   display: flex;
-  padding: 1.875rem;
-  width: 100%;
-  ul {
-    display: flex;
-    list-style-type: none;
-    a {
-      @include a-tag;
-      color: $primary;
+  list-style-type: none;
+  a {
+    @include a-tag;
+    color: $primary;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      display:none;
+      width: 100%;
+      border:1px solid transparent;
+      background:
+      linear-gradient($bg-dark,$bg-dark) padding-box,
+      linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
     }
+    &:hover{
+      @include gradient;
+        &::after {
+          display: block;
+        }
+      }
+      }
     li:not(:last-child) {
-    margin-right: 1.5rem;
-  }
+    margin-right: 24px;
+    }
   }
   .btn {
     @include button;
   }
-  }
-  .services {
+}
+.services {
   margin-top:4.5rem;
   h3 {
     @include h-3;
@@ -51,19 +74,17 @@ h1,h2,h3,h4,h5,h6{
         background:
         linear-gradient($bg-dark,$bg-dark) padding-box,
         linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
-        svg{
-            stop:first-child {
-              stop-color: #1EBEE0;
-          }
-          stop:last-child {
-              stop-color: #952491;
-          }
-        }
+        svg:hover stop:first-child {
+          stop-color: #1EBEE0;
+      }
+      
+      svg:hover stop:last-child {
+          stop-color: #952491;
+      }
       }
       &:not(:last-child){
         margin-right: 20px;
       }
-    
       h5 {
         @include h-5;
         margin-top: 30px;
@@ -80,7 +101,6 @@ h1,h2,h3,h4,h5,h6{
         margin-top: 1rem;
         margin-bottom: 2.5rem;
       } 
-      
     }
     .arrow {
       &:hover {
@@ -149,12 +169,15 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 5rem;
     h4{
       margin-top: 0px;
+      margin-bottom: 4.375rem;
     }
     .set-us-apart-listing {
       .set-us-apart-item {
         display: flex;
-        margin-top: 32px;
         margin-left: 16px;
+        &:not(:last-child){
+          margin-bottom: 3.125rem;
+        }
         .counter {
           flex: 0 0 3.75rem;
           span {
@@ -224,28 +247,28 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 .footer {
-  border-top: .0625rem solid #383838;
-  margin-top: 48px;
-  padding-top: 48px;
-  padding-bottom: 32px;
-    p {
-      font-size: 1.125rem;
-      font-weight: 400;
-    }
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      list-style-type: none;
-      li:not(:last-child) {
-        margin-right: 1.5rem;
-      } 
-      li a {
-          color: #A3A3A3;
-        svg {
-          &:hover {
-            cursor: pointer;
-          }
-        }
-      } 
-    }
+border-top: .0625rem solid #383838;
+margin-top: 48px;
+padding-top: 48px;
+padding-bottom: 32px;
+  p {
+    font-size: 1.125rem;
+    font-weight: 400;
   }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    li:not(:last-child) {
+      margin-right: 1.5rem;
+    } 
+    li a {
+        color: #A3A3A3;
+      svg {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    } 
+  }
+}
