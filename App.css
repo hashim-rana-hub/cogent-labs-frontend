@@ -12,13 +12,18 @@ body {
 }
 
 .subtitle {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 20%) !important;
+  background: linear-gradient(to right, #20d4fe 0%, #b722ff 20%) !important;
   background-clip: border-box;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -45,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   width: 100%;
   border: 1px solid transparent;
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20d4fe 0%, #b722ff 100%) border-box;
 }
 .navbar ul a:hover {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
@@ -92,10 +97,10 @@ h1, h2, h3, h4, h5, h6 {
 .services .card-listing .card:hover {
   cursor: pointer;
   border: 2px solid transparent;
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20d4fe 0%, #b722ff 100%) border-box;
 }
 .services .card-listing .card:hover svg:hover stop:first-child {
-  stop-color: #1EBEE0;
+  stop-color: #1ebee0;
 }
 .services .card-listing .card:hover svg:hover stop:last-child {
   stop-color: #952491;
@@ -214,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 1.625rem;
   height: 1.625rem;
   color: white;
-  background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
+  background: linear-gradient(180deg, #20d4fe 0%, #b722ff 100%);
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .content {
   flex: 1;
@@ -293,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 1.5rem;
 }
 .footer ul li a {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 .footer ul li a svg:hover {
   cursor: pointer;
