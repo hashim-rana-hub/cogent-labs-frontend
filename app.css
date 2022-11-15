@@ -3,9 +3,20 @@ body {
   color: #FFFFFF;
 }
 
+.subtitle {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 20%) !important;
+  background-clip: border-box;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 .navbar {
   display: flex;
-  padding: 30px;
+  padding: 1.875rem;
   width: 100%;
 }
 .navbar ul {
@@ -18,25 +29,38 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   color: #FFFFFF;
+  position: relative;
+}
+.navbar ul a:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+}
+.navbar ul a:hover {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar ul a:hover::after {
+  display: block;
 }
 .navbar ul li:not(:last-child) {
   margin-right: 24px;
 }
 .navbar .btn {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
 }
 
 .services {
-  margin-top: 3rem;
+  margin-top: 4.5rem;
 }
 .services h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFFFFF;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .services h4 {
   color: #FFFFFF;
@@ -48,39 +72,49 @@ body {
 }
 .services .card-listing {
   display: flex;
-  margin-top: 3rem;
+  justify-content: space-between;
+  margin-top: 4.5rem;
 }
 .services .card-listing .card {
   background: #000;
-  margin-right: 20px;
-  padding: 30px;
+  padding: 1.875rem;
   max-width: 360px;
-  border: 4px solid transparent;
+  border: 2px solid #fff;
 }
 .services .card-listing .card:hover {
+  cursor: pointer;
+  border: 2px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.services .card-listing .card:hover svg {
-  stroke: 45deg, #20D4FE 0%, #B722FF 100%;
+.services .card-listing .card:hover svg:hover stop:first-child {
+  stop-color: #1EBEE0;
+}
+.services .card-listing .card:hover svg:hover stop:last-child {
+  stop-color: #952491;
+}
+.services .card-listing .card:not(:last-child) {
+  margin-right: 20px;
 }
 .services .card-listing .card h5 {
   font-size: 24px;
   font-weight: 700;
-  color: #FFFFFF;
+  margin-top: 30px;
 }
 .services .card-listing .card p {
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
-  max-width: 300px;
+  max-width: 18.75rem;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 98px;
+  min-height: 6.125rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 }
 .services .card-listing .arrow:hover {
-  transform: translateX(15px);
+  transform: translateX(0.9375rem);
   transition: 0.2s ease-in;
 }
 .services a {
@@ -92,13 +126,13 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   color: #FFFFFF;
-  margin: 20px 0px 0px;
+  margin: 2.5rem 0rem 0rem;
 }
 .services a:hover {
   color: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
 }
 .services a:hover svg {
-  transform: translateX(15px);
+  transform: translateX(0.9375rem);
   transition: 0.2s ease-in;
 }
 .services a svg {
@@ -106,65 +140,71 @@ body {
 }
 
 .about-us {
-  margin-top: 3rem;
+  margin-top: 128px;
 }
-.about-us .row {
+.about-us .first-row {
   align-items: center;
 }
-.about-us .row .col-left {
-  margin-right: 3rem;
+.about-us .first-row .col-left {
+  margin-right: 48px;
 }
 .about-us h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFFFFF;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .about-us h4 {
   font-size: 40px;
   font-weight: 700;
-  color: #FFFFFF;
+  margin: 16px 0px;
 }
 .about-us p {
   font-size: 18px;
   font-weight: 400;
-  color: #FFFFFF;
-  max-width: 540px;
+  max-width: 34rem;
+  margin-bottom: 0px;
 }
 .about-us .experience h6 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .about-us .experience span {
   font-size: 20px;
   font-weight: 600;
-  color: #FFFFFF;
+}
+.about-us .experience .delivered-products {
+  margin-top: 20px;
+}
+.about-us .experience .hours-annually {
+  margin-top: 20px;
 }
 .about-us .set-us-apart {
-  margin-top: 80px;
+  margin-top: 5rem;
+}
+.about-us .set-us-apart h4 {
+  margin-top: 0px;
+  margin-bottom: 4.375rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item {
   display: flex;
-  margin-top: 2rem;
-  margin-left: 1rem;
+  margin-left: 16px;
+}
+.about-us .set-us-apart .set-us-apart-listing .set-us-apart-item:not(:last-child) {
+  margin-bottom: 3.125rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .counter {
-  flex: 0 0 60px;
+  flex: 0 0 3.75rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .counter span {
   display: flex;
   justify-content: center;
-  align-items: center;
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   color: white;
   background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
 }
@@ -172,18 +212,87 @@ body {
   flex: 1;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .content h6 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #FFFFFF;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .content p {
-  max-width: 500px;
+  max-width: 31.25rem;
+}
+
+.contact-us {
+  margin-top: 7.8rem;
+}
+.contact-us p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 40px;
+  max-width: 22.5rem;
+}
+.contact-us .information {
+  display: grid;
+}
+.contact-us .information h6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.contact-us .information a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.contact-us .information a span {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.contact-us .contact-detail h6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.contact-us .contact-detail ul {
+  padding-left: 0 !important;
+}
+.contact-us .contact-detail ul .contact-list {
+  list-style-type: none;
+  display: flex;
+  padding-top: 24px;
+}
+.contact-us .contact-detail ul .contact-list svg {
+  margin-right: 0.625rem;
+  cursor: pointer;
+}
+
+.footer {
+  border-top: 0.0625rem solid #383838;
+  margin-top: 48px;
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+.footer p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.footer ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+.footer ul li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.footer ul li a {
+  color: #A3A3A3;
+}
+.footer ul li a svg:hover {
+  cursor: pointer;
 }
 
 .consultation {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 8.75rem;
 }
 .consultation h1 {
   color: #FFFFFF;
@@ -192,21 +301,23 @@ body {
   line-height: 1.4;
 }
 .consultation h1 span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
 }
 .consultation p {
-  color: #FFFFFF;
-  max-width: 700px;
+  font-size: 18px;
+  font-weight: 400;
+  font-size: 24px;
+  max-width: 1040px;
   margin: 0px auto auto;
 }
 .consultation .btn {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
   padding: 12px 20px;
-  margin: 35px auto;
+  margin: 35px auto 7.5rem;
 }
 
 .images-grid {
@@ -234,7 +345,7 @@ body {
 }
 
 .portfolio {
-  margin-top: 3rem;
+  margin-top: 8.125rem;
 }
 .portfolio .portfolio-header {
   display: flex;
@@ -244,82 +355,180 @@ body {
 .portfolio .portfolio-header h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFFFFF;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 15%);
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .portfolio .portfolio-header h4 {
   font-size: 40px;
   font-weight: 700;
+  margin: 2.5rem 0rem 2.5rem;
 }
 
-.contact-us {
+.connection {
+  margin-top: 7rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
+}
+.connection .heading-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.connection .heading-wrapper h1 {
+  display: block;
+  font-size: 64px;
+  font-weight: 700;
+  max-width: 620px;
+}
+.connection .heading-wrapper h1 span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.connection .heading-wrapper p {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 632px;
+}
+.connection .images {
+  display: flex;
+  margin: 6rem 0rem;
+}
+.connection .images .img-1 {
+  flex: 0 0 770px;
+}
+.connection .images .img-2 {
+  flex: 1;
+}
+.connection .images .img-2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.ceo {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
+  margin-top: 8rem;
+}
+.ceo h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.ceo p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.ceo .we-are-strong {
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.ceo .we-are-strong h2 {
+  font-size: 66px;
+  font-weight: 600;
+}
+.ceo .ceo-sec {
+  align-items: flex-start;
+  margin-top: 6rem;
+  margin-bottom: 11rem;
+}
+.ceo .ceo-sec img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.ceo .ceo-sec h4 {
+  font-size: 38px;
+  font-weight: 700;
+}
+.ceo .ceo-sec .ceo-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+.ceo .ceo-sec .ceo-detail h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.ceo .ceo-sec .ceo-detail span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.our-work {
+  margin-top: 8.125rem;
+}
+.our-work .snapshot {
+  font-size: 32px;
+  font-weight: 600;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.our-work .snapshot span {
+  font-size: 40px;
+  font-weight: 700px;
+  display: block;
+  color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
+}
+.our-work .snapshot-projects {
   margin-top: 6.25rem;
 }
-.contact-us p {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 2.5rem;
-  max-width: 360px;
-}
-.contact-us .information {
-  display: grid;
-}
-.contact-us .information h6 {
-  font-size: 24px;
-  font-weight: 700;
-}
-.contact-us .information a {
-  font-size: 24px;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.contact-us .information a span {
-  font-size: 18px;
-  font-weight: 400;
-}
-.contact-us .contact-detail h6 {
-  font-size: 24px;
-  font-weight: 700;
-}
-.contact-us .contact-detail ul {
-  padding-left: 0 !important;
-}
-.contact-us .contact-detail ul .contact-list {
-  list-style-type: none;
+.our-work .snapshot-projects .snapshot-projects-list {
   display: flex;
-  padding-top: 1.5rem;
+  justify-content: space-around;
+  list-style-type: none;
 }
-.contact-us .contact-detail ul .contact-list:hover svg {
-  cursor: pointer;
+.our-work .snapshot-projects .snapshot-projects-list li:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
-.footer {
-  border-top: 1px solid #383838;
-  margin-top: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+.benifits {
+  margin-bottom: 10.5rem;
 }
-.footer p {
+.benifits .company-benefits {
+  text-align: center;
+}
+.benifits .company-benefits h3 {
+  font-size: 32px;
+  font-weight: 600;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5rem 0rem;
+}
+.benifits .company-benefits h3 span {
+  font-size: 40px;
+  font-weight: 700px;
+  display: block;
+  color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
+}
+.benifits .benifits-list {
+  margin-top: 6.25rem;
+}
+.benifits .benifits-list .benifits-detail {
+  display: flex;
+  flex-direction: column;
+}
+.benifits .benifits-list .benifits-detail .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.benifits .benifits-list .benifits-detail .title h6 {
+  color: #FFFFFF;
+  font-size: 40px;
+  background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.benifits .benifits-list .benifits-detail p {
   font-size: 18px;
   font-weight: 400;
-}
-.footer ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style-type: none;
-}
-.footer ul li:not(:last-child) {
-  margin-right: 24px;
-}
-.footer ul li a {
-  color: #A3A3A3;
-}
-.footer ul li a svg:hover {
-  cursor: pointer;
-  stroke: white;
-  color: #FFFFFF;
-  fill: #FFFFFF;
-}/*# sourceMappingURL=app.css.map */
+  border-bottom: 0.5px solid #7B7B7B;
+  padding-bottom: 30px;
+}/*# sourceMappingURL=App.css.map */
