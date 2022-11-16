@@ -13,35 +13,6 @@
   color: $primary;
   text-decoration: none;
 }
-@mixin p {
-  font-size: 18px;
-  font-weight: 400;
-}
-  
-@mixin h-1 {
-  font-size: 70px;
-  font-weight: 800;
-}
-@mixin h-2 {
-  font-size: 66px;
-  font-weight: 600;
-}
-@mixin h-3 {
-  font-size: 32px;
-  font-weight: 600;
-}
-@mixin h-4 {
-  font-size: 40px;
-  font-weight: 700;
-}
-@mixin h-5 {
-  font-size: 24px;
-  font-weight: 700;
-}
-@mixin h-6 {
-  font-size: 24px;
-  font-weight: 700;
-}
 @mixin span {
   font-size: 40px;
   font-weight: 700px;

@@ -10,13 +10,9 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
 .navbar {
   display: flex;
-  padding: 1.875rem;
+  padding: 30px;
   width: 100%;
 }
 .navbar ul {
@@ -28,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
-  color: #FFFFFF;
   position: relative;
 }
 .navbar ul a:after {
@@ -36,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   display: none;
   width: 100%;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
 .navbar ul a:hover {
@@ -53,68 +48,55 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .btn {
   background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
+  font-size: 18px;
 }
 
 .services {
-  margin-top: 4.5rem;
+  margin-top: 72px;
 }
-.services h3 {
-  font-size: 32px;
-  font-weight: 600;
-}
-.services h4 {
-  color: #FFFFFF;
-  font-size: 40px;
-  font-weight: 700;
-}
-.services h4 span {
+.services h3 span {
   display: block;
 }
 .services .card-listing {
   display: flex;
   justify-content: space-between;
-  margin-top: 4.5rem;
+  margin-top: 72px;
 }
 .services .card-listing .card {
   background: #000;
-  padding: 1.875rem;
-  max-width: 360px;
-  border: 2px solid #fff;
+  padding: 30px;
+  max-width: 22.5rem;
+  border: 0.125rem solid #fff;
 }
 .services .card-listing .card:hover {
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.services .card-listing .card:hover svg:hover stop:first-child {
+.services .card-listing .card:hover stop:first-child {
   stop-color: #1EBEE0;
 }
-.services .card-listing .card:hover svg:hover stop:last-child {
+.services .card-listing .card:hover stop:last-child {
   stop-color: #952491;
 }
 .services .card-listing .card:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
-.services .card-listing .card h5 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 30px;
+.services .card-listing .card h6 {
+  margin-top: 1.875rem;
 }
 .services .card-listing .card p {
-  font-size: 18px;
-  font-weight: 400;
-  color: #FFFFFF;
-  max-width: 18.75rem;
+  max-width: 300px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 6.125rem;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  min-height: 98px;
+  margin-top: 16px;
+  margin-bottom: 40px;
 }
 .services .card-listing .arrow:hover {
-  transform: translateX(0.9375rem);
+  transform: translateX(15px);
   transition: 0.2s ease-in;
 }
 .services a {
@@ -126,49 +108,36 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   text-decoration: none;
   color: #FFFFFF;
-  margin: 2.5rem 0rem 0rem;
-}
-.services a:hover {
-  color: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  margin: 40px 0px 0px;
 }
 .services a:hover svg {
-  transform: translateX(0.9375rem);
+  transform: translateX(15px);
   transition: 0.2s ease-in;
 }
 .services a svg {
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 
 .about-us {
-  margin-top: 128px;
+  margin-top: 8rem;
 }
 .about-us .first-row {
   align-items: center;
 }
 .about-us .first-row .col-left {
-  margin-right: 48px;
+  margin-right: 3rem;
 }
 .about-us h3 {
-  font-size: 32px;
-  font-weight: 600;
-}
-.about-us h4 {
-  font-size: 40px;
-  font-weight: 700;
-  margin: 16px 0px;
+  margin: 16px 0rem;
 }
 .about-us p {
-  font-size: 18px;
-  font-weight: 400;
-  max-width: 34rem;
-  margin-bottom: 0px;
+  max-width: 544px;
+  margin-bottom: 0rem;
 }
-.about-us .experience h6 {
+.about-us .experience h3 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
-  font-weight: 700;
 }
 .about-us .experience span {
   font-size: 20px;
@@ -183,58 +152,50 @@ h1, h2, h3, h4, h5, h6 {
 .about-us .set-us-apart {
   margin-top: 5rem;
 }
-.about-us .set-us-apart h4 {
-  margin-top: 0px;
-  margin-bottom: 4.375rem;
+.about-us .set-us-apart h3 {
+  margin-top: 0rem;
+  margin-bottom: 70px;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item {
   display: flex;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item:not(:last-child) {
-  margin-bottom: 3.125rem;
+  margin-bottom: 50px;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .counter {
-  flex: 0 0 3.75rem;
+  flex: 0 0 60px;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .counter span {
   display: flex;
   justify-content: center;
-  border-radius: 50%;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
-  width: 1.625rem;
-  height: 1.625rem;
-  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
   background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .content {
   flex: 1;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .content h6 {
-  font-size: 1.5rem;
   font-weight: 600;
-  color: #FFFFFF;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item .content p {
-  max-width: 31.25rem;
+  max-width: 500px;
 }
 
 .contact-us {
-  margin-top: 7.8rem;
+  margin-top: 10rem;
+  padding: 0px 5rem;
 }
-.contact-us p {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 40px;
-  max-width: 22.5rem;
+.contact-us .description {
+  margin-top: 2.5rem;
+  max-width: 360px;
 }
 .contact-us .information {
   display: grid;
-}
-.contact-us .information h6 {
-  font-size: 24px;
-  font-weight: 700;
 }
 .contact-us .information a {
   font-size: 24px;
@@ -242,36 +203,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   text-decoration: none;
 }
-.contact-us .information a span {
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-.contact-us .contact-detail h6 {
-  font-size: 24px;
-  font-weight: 700;
-}
 .contact-us .contact-detail ul {
   padding-left: 0 !important;
 }
 .contact-us .contact-detail ul .contact-list {
   list-style-type: none;
   display: flex;
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 .contact-us .contact-detail ul .contact-list svg {
-  margin-right: 0.625rem;
+  margin-right: 10px;
   cursor: pointer;
 }
 
 .footer {
-  border-top: 0.0625rem solid #383838;
-  margin-top: 48px;
-  padding-top: 48px;
-  padding-bottom: 32px;
-}
-.footer p {
-  font-size: 1.125rem;
-  font-weight: 400;
+  border-top: 1px solid #383838;
+  margin-top: 3rem;
+  padding: 2.5rem 4.375rem;
 }
 .footer ul {
   display: flex;
@@ -279,13 +227,55 @@ h1, h2, h3, h4, h5, h6 {
   list-style-type: none;
 }
 .footer ul li:not(:last-child) {
-  margin-right: 1.5rem;
-}
-.footer ul li a {
-  color: #A3A3A3;
+  margin-right: 24px;
 }
 .footer ul li a svg:hover {
   cursor: pointer;
+}
+.footer ul li a svg:hover stop:first-child {
+  stop-color: #1EBEE0;
+}
+.footer ul li a svg:hover stop:last-child {
+  stop-color: #952491;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 66px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .consultation {
@@ -295,8 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 8.75rem;
 }
 .consultation h1 {
-  color: #FFFFFF;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 800;
   line-height: 1.4;
 }
@@ -306,16 +295,15 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
   display: block;
 }
-.consultation p {
-  font-size: 18px;
+.consultation h6 {
   font-weight: 400;
-  font-size: 24px;
   max-width: 1040px;
   margin: 0px auto auto;
 }
 .consultation .btn {
   background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
+  font-size: 18px;
   padding: 12px 20px;
   margin: 35px auto 7.5rem;
 }
@@ -323,6 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 .images-grid {
   display: grid;
   justify-content: space-between;
+  grid-gap: 20px;
   grid-template-areas: "item-1 item-2 item-3" "item-4 item-2 item-5";
 }
 .images-grid .item-1 {
@@ -352,16 +341,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
 }
-.portfolio .portfolio-header h3 {
-  font-size: 32px;
-  font-weight: 600;
+.portfolio .portfolio-header h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.portfolio .portfolio-header h4 {
-  font-size: 40px;
-  font-weight: 700;
+.portfolio .portfolio-header h3 {
   margin: 2.5rem 0rem 2.5rem;
 }
 
@@ -376,8 +361,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .connection .heading-wrapper h1 {
   display: block;
-  font-size: 64px;
-  font-weight: 700;
   max-width: 620px;
 }
 .connection .heading-wrapper h1 span {
@@ -386,8 +369,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 .connection .heading-wrapper p {
-  font-size: 18px;
-  font-weight: 400;
   max-width: 632px;
 }
 .connection .images {
@@ -409,21 +390,15 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
   margin-top: 8rem;
 }
-.ceo h5 {
-  font-size: 24px;
+.ceo h1 {
   font-weight: 600;
 }
-.ceo p {
-  font-size: 18px;
-  font-weight: 400;
+.ceo h6 {
+  font-weight: 600;
 }
 .ceo .we-are-strong {
   align-items: center;
   margin-bottom: 4rem;
-}
-.ceo .we-are-strong h2 {
-  font-size: 66px;
-  font-weight: 600;
 }
 .ceo .ceo-sec {
   align-items: flex-start;
@@ -434,10 +409,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-}
-.ceo .ceo-sec h4 {
-  font-size: 38px;
-  font-weight: 700;
 }
 .ceo .ceo-sec .ceo-detail {
   display: flex;
@@ -456,21 +427,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .our-work {
   margin-top: 8.125rem;
+  text-align: center;
 }
-.our-work .snapshot {
-  font-size: 32px;
-  font-weight: 600;
+.our-work h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
-}
-.our-work .snapshot span {
-  font-size: 40px;
-  font-weight: 700px;
-  display: block;
-  color: #FFFFFF;
-  -webkit-text-fill-color: #ffffff;
 }
 .our-work .snapshot-projects {
   margin-top: 6.25rem;
@@ -489,46 +451,138 @@ h1, h2, h3, h4, h5, h6 {
 }
 .benifits .company-benefits {
   text-align: center;
+  margin: 5rem 0rem;
 }
-.benifits .company-benefits h3 {
-  font-size: 32px;
-  font-weight: 600;
+.benifits .company-benefits h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 5rem 0rem;
 }
-.benifits .company-benefits h3 span {
-  font-size: 40px;
-  font-weight: 700px;
-  display: block;
-  color: #FFFFFF;
-  -webkit-text-fill-color: #ffffff;
-}
-.benifits .benifits-list {
+.benifits .benifits-detail {
   margin-top: 6.25rem;
 }
-.benifits .benifits-list .benifits-detail {
+.benifits .benifits-detail .benifits-list {
   display: flex;
-  flex-direction: column;
-}
-.benifits .benifits-list .benifits-detail .title {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  list-style-type: none;
+  width: 100%;
 }
-.benifits .benifits-list .benifits-detail .title h6 {
-  color: #FFFFFF;
-  font-size: 40px;
-  background: linear-gradient(180deg, #20D4FE 0%, #B722FF 100%);
+.benifits .benifits-detail .benifits-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+.benifits .benifits-detail .benifits-list li {
+  width: 48%;
+  border-bottom: 0.5px solid #7B7B7B;
+}
+.benifits .benifits-detail .benifits-list li p {
+  text-align: justify;
+  padding-bottom: 30px;
+}
+.benifits .benifits-detail .benifits-list .title {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #20D4FE 0%, #B722FF 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 24px;
 }
-.benifits .benifits-list .benifits-detail p {
+
+h2 {
+  text-align: left;
+}
+
+.product-scale {
+  margin-top: 107px;
+  margin-bottom: 130px;
+}
+.product-scale h1 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+}
+.product-scale h1 span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+.product-scale p {
+  max-width: 743px;
+  margin: 24px auto 60px;
   font-size: 18px;
   font-weight: 400;
-  border-bottom: 0.5px solid #7B7B7B;
-  padding-bottom: 30px;
+}
+
+.project-failure {
+  margin-top: 130px;
+}
+.project-failure .failure-details h2 {
+  text-align: left !important;
+  font-size: 52px;
+  font-weight: 600;
+}
+.project-failure .failure-details p {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  margin: 16px auto 20px;
+}
+.project-failure .failure-details .work-policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 690px;
+  margin-top: 40px;
+}
+.project-failure .failure-details .work-policy .tick {
+  flex: 0 0 35px;
+  margin-right: 55px;
+}
+.project-failure .failure-details .work-policy .policy-detail {
+  flex: 1;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.lasting-impact {
+  margin-top: 130px;
+}
+.lasting-impact h2 {
+  font-size: 52px;
+  font-weight: 600;
+}
+.lasting-impact h2 span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lasting-impact .impact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lasting-impact .impact-details p {
+  text-align: left;
+}
+
+.our-qualities {
+  text-align: left;
+}
+.our-qualities span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
+  font-weight: 800;
+}
+.our-qualities h4 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.our-qualities p {
+  font-size: 18px;
+  font-weight: 400;
 }/*# sourceMappingURL=App.css.map */
