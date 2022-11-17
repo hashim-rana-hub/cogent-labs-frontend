@@ -1,0 +1,103 @@
+.blog{
+  text-align: center;
+  h1 {
+    @include gradient;
+  }
+  p {
+    max-width: 860px;
+    margin: 10px auto ;
+  }
+}
+.recent-blog{
+  margin-top: 90px;
+  text-align: center;
+  .card-grid{
+  display: grid;
+  margin-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas:
+  'card-1 card-2'
+  'card-1 card-3';
+  .card-1 { grid-area: card-1; }
+  .card-2 { grid-area: card-2; }
+  .card-3 { grid-area: card-3; }
+    .card{
+      background: $bg-dark;
+      text-align: left;
+      border-radius: 50px;
+      .card-body{
+        padding: 0px;
+        span{
+          font-size: 30px;
+          font-weight: 700;
+          @include gradient;
+        }
+      }
+    }
+  }
+}
+.blog-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 8.125rem;
+  .input-group{
+    max-width: 730px;
+    height: 10vh;
+    margin-top: 3.75rem;
+    input{
+      background: $bg-dark;
+      font-size: 18px;
+      &::placeholder{
+        color: white;
+      }
+    }
+  }
+  button{
+    @include button;
+    margin: 1.875rem 0rem 8.125rem;
+    padding: 15px 70px;
+  }
+}
+.blog-grid{
+  display: grid;
+  margin-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas:
+  'card-1 card-2 card-3'
+  'card-4 card-5 card-6';
+  .card-1 { grid-area: card-1; }
+  .card-2 { grid-area: card-2; }
+  .card-3 { grid-area: card-3; }
+  .card-4 { grid-area: card-4; }
+  .card-5 { grid-area: card-5; }
+  .card-6 { grid-area: card-6; }
+    .card{
+      background: $bg-dark;
+      text-align: left;
+      border-radius: 50px;
+      .card-body{
+        padding: 0px;
+        span{
+          font-size: 30px;
+          font-weight: 700;
+          @include gradient;
+        }
+      }
+      .card-footer{
+       padding: 0px;
+       display: flex;
+       justify-content: space-between;
+       span{
+        font-size: 16px;
+        font-weight: 600;
+        @include gradient;
+       }
+       p{
+        font-size: 16px;
+        font-weight: 300;
+       }
+      }
+    }
+  }

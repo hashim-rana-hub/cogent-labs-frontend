@@ -31,7 +31,7 @@ body {
   position: absolute;
   display: none;
   width: 100%;
-  border: 0.0625rem solid transparent;
+  border: 1px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
 .navbar ul a:hover {
@@ -49,10 +49,12 @@ body {
   background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
   font-size: 18px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .services {
-  margin-top: 72px;
+  margin-top: 4.5rem;
 }
 .services h3 span {
   display: block;
@@ -60,7 +62,7 @@ body {
 .services .card-listing {
   display: flex;
   justify-content: space-between;
-  margin-top: 72px;
+  margin-top: 3.75rem;
 }
 .services .card-listing .card {
   background: #000;
@@ -115,7 +117,7 @@ body {
   transition: 0.2s ease-in;
 }
 .services a svg {
-  margin-left: 0.3125rem;
+  margin-left: 5px;
 }
 
 .about-us {
@@ -128,11 +130,11 @@ body {
   margin-right: 3rem;
 }
 .about-us h3 {
-  margin: 16px 0rem;
+  margin: 16px 0px;
 }
 .about-us p {
   max-width: 544px;
-  margin-bottom: 0rem;
+  margin-bottom: 0px;
 }
 .about-us .experience h3 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
@@ -153,12 +155,12 @@ body {
   margin-top: 5rem;
 }
 .about-us .set-us-apart h3 {
-  margin-top: 0rem;
+  margin-top: 0px;
   margin-bottom: 70px;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item {
   display: flex;
-  margin-left: 1rem;
+  margin-left: 16px;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item:not(:last-child) {
   margin-bottom: 50px;
@@ -188,7 +190,7 @@ body {
 
 .contact-us {
   margin-top: 10rem;
-  padding: 0px 5rem;
+  padding: 0rem 5rem;
 }
 .contact-us .description {
   margin-top: 2.5rem;
@@ -278,6 +280,11 @@ p {
   font-weight: 400;
 }
 
+button {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .consultation {
   display: flex;
   flex-direction: column;
@@ -304,13 +311,14 @@ p {
   background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border: none;
   font-size: 18px;
+  font-weight: 500;
+  font-size: 18px;
   padding: 12px 20px;
   margin: 35px auto 7.5rem;
 }
 
 .images-grid {
   display: grid;
-  justify-content: space-between;
   grid-gap: 20px;
   grid-template-areas: "item-1 item-2 item-3" "item-4 item-2 item-5";
 }
@@ -329,8 +337,28 @@ p {
 .images-grid .item-5 {
   grid-area: item-5;
 }
+.images-grid .image {
+  position: relative;
+  overflow: hidden;
+}
+.images-grid .image .overlays {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.3s all;
+}
 .images-grid .image:hover {
   opacity: 0.7;
+}
+.images-grid .image:hover .overlays {
+  left: -100%;
+}
+.images-grid img {
+  width: 100%;
+  height: 100%;
 }
 
 .portfolio {
@@ -488,13 +516,9 @@ p {
   margin-bottom: 24px;
 }
 
-h2 {
-  text-align: left;
-}
-
 .product-scale {
-  margin-top: 107px;
-  margin-bottom: 130px;
+  margin-top: 8.75rem;
+  margin-bottom: 8rem;
 }
 .product-scale h1 {
   text-align: center;
@@ -508,50 +532,36 @@ h2 {
   display: block;
 }
 .product-scale p {
-  max-width: 743px;
+  max-width: 750px;
   margin: 24px auto 60px;
-  font-size: 18px;
-  font-weight: 400;
 }
 
 .project-failure {
-  margin-top: 130px;
+  margin-top: 8.75rem;
 }
-.project-failure .failure-details h2 {
-  text-align: left !important;
-  font-size: 52px;
-  font-weight: 600;
-}
-.project-failure .failure-details p {
+.project-failure p {
   font-size: 20px;
-  font-weight: 400;
-  text-align: left;
   margin: 16px auto 20px;
 }
-.project-failure .failure-details .work-policy {
+.project-failure .work-policy {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 690px;
+  max-width: 630px;
   margin-top: 40px;
 }
-.project-failure .failure-details .work-policy .tick {
+.project-failure .work-policy .tick {
   flex: 0 0 35px;
   margin-right: 55px;
 }
-.project-failure .failure-details .work-policy .policy-detail {
+.project-failure .work-policy .policy-detail {
   flex: 1;
-  text-align: left;
   font-size: 20px;
   font-weight: 500;
 }
 
 .lasting-impact {
-  margin-top: 130px;
-}
-.lasting-impact h2 {
-  font-size: 52px;
-  font-weight: 600;
+  margin: 8.125rem 0px 3.75rem;
 }
 .lasting-impact h2 span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
@@ -577,12 +587,195 @@ h2 {
   font-size: 80px;
   font-weight: 800;
 }
-.our-qualities h4 {
-  font-size: 40px;
+.our-qualities h3 {
   font-weight: 600;
   margin-bottom: 8px;
 }
-.our-qualities p {
+
+.blog {
+  text-align: center;
+}
+.blog h1 {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog p {
+  max-width: 860px;
+  margin: 10px auto;
+}
+
+.recent-blog {
+  margin-top: 90px;
+  text-align: center;
+}
+.recent-blog .card-grid {
+  display: grid;
+  margin-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas: "card-1 card-2" "card-1 card-3";
+}
+.recent-blog .card-grid .card-1 {
+  grid-area: card-1;
+}
+.recent-blog .card-grid .card-2 {
+  grid-area: card-2;
+}
+.recent-blog .card-grid .card-3 {
+  grid-area: card-3;
+}
+.recent-blog .card-grid .card {
+  background: #000;
+  text-align: left;
+  border-radius: 50px;
+}
+.recent-blog .card-grid .card .card-body {
+  padding: 0px;
+}
+.recent-blog .card-grid .card .card-body span {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 8.125rem;
+}
+.blog-post .input-group {
+  max-width: 730px;
+  height: 10vh;
+  margin-top: 3.75rem;
+}
+.blog-post .input-group input {
+  background: #000;
   font-size: 18px;
+}
+.blog-post .input-group input::-moz-placeholder {
+  color: white;
+}
+.blog-post .input-group input:-ms-input-placeholder {
+  color: white;
+}
+.blog-post .input-group input::placeholder {
+  color: white;
+}
+.blog-post button {
+  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 1.875rem 0rem 8.125rem;
+  padding: 15px 70px;
+}
+
+.blog-grid {
+  display: grid;
+  margin-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas: "card-1 card-2 card-3" "card-4 card-5 card-6";
+}
+.blog-grid .card-1 {
+  grid-area: card-1;
+}
+.blog-grid .card-2 {
+  grid-area: card-2;
+}
+.blog-grid .card-3 {
+  grid-area: card-3;
+}
+.blog-grid .card-4 {
+  grid-area: card-4;
+}
+.blog-grid .card-5 {
+  grid-area: card-5;
+}
+.blog-grid .card-6 {
+  grid-area: card-6;
+}
+.blog-grid .card {
+  background: #000;
+  text-align: left;
+  border-radius: 50px;
+}
+.blog-grid .card .card-body {
+  padding: 0px;
+}
+.blog-grid .card .card-body span {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog-grid .card .card-footer {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-grid .card .card-footer span {
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog-grid .card .card-footer p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h6 {
   font-weight: 400;
+}
+
+.development {
+  display: flex;
+  flex-direction: column;
+}
+.development .development-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.development .development-header h1 {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.development h6 {
+  margin: 60px 0px;
+}
+
+.blog-description h3 {
+  margin-bottom: 30px;
+}
+.blog-description .quote {
+  display: flex;
+  flex-direction: column;
+  padding: 3.75rem 8.125rem;
+}
+.blog-description .quote .quote-header {
+  display: flex;
+}
+.blog-description .quote .quote-header span {
+  position: relative;
+  font-size: 36px;
+  font-weight: 300;
+}
+.blog-description .quote .quote-header span::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border: 2px solid #FFFFFF;
+  display: block;
+}
+.blog-description .quote blockquote {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 800px;
 }/*# sourceMappingURL=App.css.map */

@@ -3,9 +3,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@mixin button{
+@mixin button {
   background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
   border:none;
+  font-size: 18px;
+  font-weight: 500;
 }
 @mixin a-tag {
   font-size: 24px;
@@ -18,9 +20,7 @@
   font-weight: 700px;
   display: block;
 }
-@mixin truncate($lines,
-  $lh: 1.2,
-  $spacer:0) {
+@mixin truncate($lines,$lh: 1.2,$spacer:0) {
   line-height: $lh;
   max-height: $lh * $lines + $spacer + em;
   // overflow: hidden;
