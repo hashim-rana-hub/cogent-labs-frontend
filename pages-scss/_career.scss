@@ -1,0 +1,170 @@
+.career-page{
+  .find-job{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1{
+      span{
+        @include gradient;
+        display: block;
+      }
+    }
+    p{
+      max-width: 860px;
+    }
+    .input-group{
+      max-width: 730px;
+      height: 10vh;
+      margin-top: 2rem;
+      input{
+        font-size: 18px;
+        color: $primary;
+        background: $bg-dark;
+        border: 1px solid $primary;
+        border-radius: 0;
+        &::placeholder{
+          color: white;
+        }
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+    button{
+      @include button;
+      margin: 1.875rem 0rem 7rem;
+      padding: 15px 70px;
+    }
+  }
+}
+.positions{
+  display: flex;
+  margin-bottom: 150px;
+}
+.career{
+  .career-header{
+    text-align: center;
+    h5{
+      @include gradient;
+    }
+  }
+  .career-positions{
+    margin: 60px 0;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      list-style-type: none;
+      a {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        @include a-tag;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          display:none;
+          width: 100%;
+          border:1px solid transparent;
+          background:
+          linear-gradient($bg-dark,$bg-dark) padding-box,
+          linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+        }
+        &:hover{
+          @include gradient;
+            &::after {
+              display: block;
+            }
+          }
+        }
+        li:not(:last-child) {
+        margin-right: 24px;
+        }
+      }
+  }
+  .jobs-list{
+    ul{
+      list-style-type: none;
+      padding: 0;
+      li{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #FFFFFF99;
+        .job-title{
+          span{
+            font-size: 30px;
+            font-weight: 700;
+          }
+          p{
+            font-weight: 500;
+          }
+        }
+        button{
+          border:1px solid transparent;
+          padding: 10px 50px;
+          background:
+          linear-gradient($bg-dark,$bg-dark) padding-box,
+          linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+          &:hover{
+            @include button;
+          }
+        }
+        &:not(:last-child){
+          margin-bottom: 35px;
+        }
+        }
+      }
+    }
+}
+.job-form{
+  margin-bottom: 130px;
+  .job-form-header{
+    margin: 130px 0 60px;
+    text-align: center;
+    h5{
+      @include gradient;
+    }
+  }
+  form{
+    padding: 0 60px;
+    .form-group{
+      display: flex;
+      align-items: center;
+      .form-group-column{
+        input{
+          background: $bg-dark;
+          color: $primary;
+          box-shadow: none;
+        }
+        select{
+          background: $bg-dark;
+          color: $primary;
+          box-shadow: none;
+        }
+      }
+      label{
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+    .file-upload-wrapper{
+      input {
+        border: 2px dashed #92b0b3;
+        border-radius: 6px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        padding: 120px 0px 85px 35%;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+      }
+    }
+    button{
+      @include button;
+      padding: 15px 100px;
+      margin-top: 80px;
+    }
+  }
+}

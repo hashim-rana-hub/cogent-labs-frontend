@@ -46,10 +46,8 @@ body {
   margin-right: 24px;
 }
 .navbar .btn {
-  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
-  font-size: 18px;
-  font-weight: 500;
   font-size: 18px;
 }
 
@@ -281,8 +279,8 @@ p {
 }
 
 button {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 18px !important;
+  font-weight: 500 !important;
 }
 
 .consultation {
@@ -308,10 +306,8 @@ button {
   margin: 0px auto auto;
 }
 .consultation .btn {
-  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
-  font-size: 18px;
-  font-weight: 500;
   font-size: 18px;
   padding: 12px 20px;
   margin: 35px auto 7.5rem;
@@ -433,16 +429,16 @@ button {
   margin-top: 6rem;
   margin-bottom: 11rem;
 }
-.ceo .ceo-sec img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-}
 .ceo .ceo-sec .ceo-detail {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 5rem;
+}
+.ceo .ceo-sec .ceo-detail img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
 }
 .ceo .ceo-sec .ceo-detail h3 {
   font-size: 24px;
@@ -627,6 +623,7 @@ button {
 .recent-blog .card-grid .card {
   background: #000;
   text-align: left;
+  cursor: pointer;
   border-radius: 50px;
 }
 .recent-blog .card-grid .card .card-body {
@@ -653,8 +650,11 @@ button {
   margin-top: 3.75rem;
 }
 .blog-post .input-group input {
-  background: #000;
   font-size: 18px;
+  color: #FFFFFF;
+  background: #000;
+  border: 1px solid #FFFFFF;
+  border-radius: 0;
 }
 .blog-post .input-group input::-moz-placeholder {
   color: white;
@@ -665,11 +665,12 @@ button {
 .blog-post .input-group input::placeholder {
   color: white;
 }
+.blog-post .input-group input:focus {
+  box-shadow: none;
+}
 .blog-post button {
-  background: linear-gradient(90deg, #20D4FE 0.09%, #B722FF 99.91%);
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
-  font-size: 18px;
-  font-weight: 500;
   margin: 1.875rem 0rem 8.125rem;
   padding: 15px 70px;
 }
@@ -701,6 +702,7 @@ button {
 .blog-grid .card {
   background: #000;
   text-align: left;
+  cursor: pointer;
   border-radius: 50px;
 }
 .blog-grid .card .card-body {
@@ -751,6 +753,9 @@ h6 {
   margin: 60px 0px;
 }
 
+.blog-description {
+  margin-bottom: 60px;
+}
 .blog-description h3 {
   margin-bottom: 30px;
 }
@@ -778,4 +783,306 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   max-width: 800px;
+}
+.blog-description .images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.blog-description .images h6 {
+  padding-top: 40px;
+}
+
+.video-blog h3 {
+  padding: 30px 0px 60px;
+}
+.video-blog iframe {
+  width: 100%;
+  height: 500px;
+}
+.video-blog .video-blog-footer {
+  margin: 60px 0px 130px;
+}
+.video-blog .video-blog-footer .blog-writer {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.video-blog .video-blog-footer .blog-writer img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: 30px;
+}
+
+.consultation-page {
+  margin-bottom: 160px;
+}
+.consultation-page .consultation-header h1 {
+  text-align: center;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.consultation-page .consultation-body {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  margin-top: 80px;
+}
+.consultation-page .consultation-body .consultation-form {
+  padding: 0 30px 0;
+  height: 700px;
+  background: #1E1E1E;
+}
+.consultation-page .consultation-body .consultation-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.consultation-page .consultation-body .consultation-form form .form-header {
+  padding: 40px 0px 50px;
+}
+.consultation-page .consultation-body .consultation-form form .form-group:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+.consultation-page .consultation-body .consultation-form form .form-group .form-control {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #FFFFFF;
+  background-color: #1E1E1E;
+  padding: 0;
+}
+.consultation-page .consultation-body .consultation-form form .form-group .form-control::-moz-placeholder {
+  color: #A3A3A3;
+}
+.consultation-page .consultation-body .consultation-form form .form-group .form-control:-ms-input-placeholder {
+  color: #A3A3A3;
+}
+.consultation-page .consultation-body .consultation-form form .form-group .form-control::placeholder {
+  color: #A3A3A3;
+}
+.consultation-page .consultation-body .consultation-form form .form-group .form-control:focus {
+  box-shadow: none;
+}
+.consultation-page .consultation-body .consultation-form form button {
+  align-items: center;
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
+  border: none;
+  padding: 20px 90px;
+  margin: 80px auto 170px;
+}
+.consultation-page .consultation-body .our-contacts .contact-header {
+  margin-top: 40px;
+}
+.consultation-page .consultation-body .our-contacts .contact-header h5 {
+  margin-bottom: 20px;
+}
+.consultation-page .consultation-body .our-contacts .contact-header h2 {
+  margin-bottom: 20px;
+}
+.consultation-page .consultation-body .our-contacts .contact-details {
+  margin: 70px 0 40px;
+}
+.consultation-page .consultation-body .our-contacts .contact-details span {
+  display: block;
+  font-size: 20px;
+  font-weight: 500px;
+}
+.consultation-page .consultation-body .our-contacts .contact-details span:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+.consultation-page .consultation-body .our-contacts .contact-details ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 40px 0 0;
+}
+.consultation-page .consultation-body .our-contacts .contact-details ul li svg:hover stop:first-child {
+  stop-color: #1EBEE0;
+}
+.consultation-page .consultation-body .our-contacts .contact-details ul li svg:hover stop:last-child {
+  stop-color: #952491;
+}
+.consultation-page .consultation-body .our-contacts .contact-details ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.career-page .find-job {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.career-page .find-job h1 span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+.career-page .find-job p {
+  max-width: 860px;
+}
+.career-page .find-job .input-group {
+  max-width: 730px;
+  height: 10vh;
+  margin-top: 2rem;
+}
+.career-page .find-job .input-group input {
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #000;
+  border: 1px solid #FFFFFF;
+  border-radius: 0;
+}
+.career-page .find-job .input-group input::-moz-placeholder {
+  color: white;
+}
+.career-page .find-job .input-group input:-ms-input-placeholder {
+  color: white;
+}
+.career-page .find-job .input-group input::placeholder {
+  color: white;
+}
+.career-page .find-job .input-group input:focus {
+  box-shadow: none;
+}
+.career-page .find-job button {
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
+  border: none;
+  margin: 1.875rem 0rem 7rem;
+  padding: 15px 70px;
+}
+
+.positions {
+  display: flex;
+  margin-bottom: 150px;
+}
+
+.career .career-header {
+  text-align: center;
+}
+.career .career-header h5 {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.career .career-positions {
+  margin: 60px 0;
+}
+.career .career-positions ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+}
+.career .career-positions ul a {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  position: relative;
+}
+.career .career-positions ul a:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+}
+.career .career-positions ul a:hover {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.career .career-positions ul a:hover::after {
+  display: block;
+}
+.career .career-positions ul li:not(:last-child) {
+  margin-right: 24px;
+}
+.career .jobs-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+.career .jobs-list ul li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.career .jobs-list ul li .job-title span {
+  font-size: 30px;
+  font-weight: 700;
+}
+.career .jobs-list ul li .job-title p {
+  font-weight: 500;
+}
+.career .jobs-list ul li button {
+  border: 1px solid transparent;
+  padding: 10px 50px;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+}
+.career .jobs-list ul li button:hover {
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
+  border: none;
+}
+.career .jobs-list ul li:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.job-form {
+  margin-bottom: 130px;
+}
+.job-form .job-form-header {
+  margin: 130px 0 60px;
+  text-align: center;
+}
+.job-form .job-form-header h5 {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.job-form form {
+  padding: 0 60px;
+}
+.job-form form .form-group {
+  display: flex;
+  align-items: center;
+}
+.job-form form .form-group .form-group-column input {
+  background: #000;
+  color: #FFFFFF;
+  box-shadow: none;
+}
+.job-form form .form-group .form-group-column select {
+  background: #000;
+  color: #FFFFFF;
+  box-shadow: none;
+}
+.job-form form .form-group label {
+  font-size: 30px;
+  font-weight: 500;
+}
+.job-form form .file-upload-wrapper input {
+  border: 2px dashed #92b0b3;
+  border-radius: 6px;
+  transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+  padding: 120px 0px 85px 35%;
+  text-align: center !important;
+  margin: 0;
+  width: 100% !important;
+}
+.job-form form button {
+  background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
+  border: none;
+  padding: 15px 100px;
+  margin-top: 80px;
 }/*# sourceMappingURL=App.css.map */

@@ -48,16 +48,16 @@
     align-items: flex-start;
     margin-top: 6rem;
     margin-bottom: 11rem;
-    img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-    }
     .ceo-detail {
       display: flex;
       align-items: center;
       justify-content: space-around;
       margin-bottom: 5rem;
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+      }
       h3 {
         font-size: 24px;
         font-weight: 700;

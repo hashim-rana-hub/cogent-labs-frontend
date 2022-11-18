@@ -24,6 +24,7 @@
     .card{
       background: $bg-dark;
       text-align: left;
+      cursor: pointer;
       border-radius: 50px;
       .card-body{
         padding: 0px;
@@ -47,10 +48,16 @@
     height: 10vh;
     margin-top: 3.75rem;
     input{
-      background: $bg-dark;
       font-size: 18px;
+      color: $primary;
+      background: $bg-dark;
+      border: 1px solid $primary;
+      border-radius: 0;
       &::placeholder{
         color: white;
+      }
+      &:focus{
+        box-shadow: none;
       }
     }
   }
@@ -76,6 +83,7 @@
     .card{
       background: $bg-dark;
       text-align: left;
+      cursor: pointer;
       border-radius: 50px;
       .card-body{
         padding: 0px;

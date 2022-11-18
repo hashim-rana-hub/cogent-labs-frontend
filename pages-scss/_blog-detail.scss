@@ -16,6 +16,7 @@ h6 {
   }
 }
 .blog-description {
+  margin-bottom: 60px;
   h3 {
     margin-bottom: 30px;
   }
@@ -43,5 +44,37 @@ h6 {
       font-weight: 700;
       max-width: 800px;
     }
+  }
+  .images{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    h6{
+      padding-top: 40px;
+    }
+  }
+}
+.video-blog {
+  h3{
+    padding: 30px 0px 60px;
+  }
+  iframe{
+    width: 100%;
+    height: 500px;
+  }
+  .video-blog-footer{
+    margin: 60px 0px 130px;
+    .blog-writer{
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-right: 30px;
+      }
+    }
+
   }
 }
