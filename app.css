@@ -38,6 +38,9 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .navbar ul a:hover::after {
   display: block;
@@ -138,6 +141,9 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .about-us .experience span {
   font-size: 20px;
@@ -255,6 +261,9 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .blog-grid .card .card-footer {
   padding: 0px;
@@ -267,10 +276,57 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .blog-grid .card .card-footer p {
   font-size: 16px;
   font-weight: 300;
+}
+
+.images-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "item-1 item-2 item-3" "item-4 item-2 item-5";
+}
+.images-grid .item-1 {
+  grid-area: item-1;
+}
+.images-grid .item-2 {
+  grid-area: item-2;
+}
+.images-grid .item-3 {
+  grid-area: item-3;
+}
+.images-grid .item-4 {
+  grid-area: item-4;
+}
+.images-grid .item-5 {
+  grid-area: item-5;
+}
+.images-grid .image {
+  position: relative;
+  overflow: hidden;
+}
+.images-grid .image .overlays {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.3s all;
+}
+.images-grid .image:hover {
+  opacity: 0.7;
+}
+.images-grid .image:hover .overlays {
+  left: -100%;
+}
+.images-grid img {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -355,6 +411,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: block;
 }
 .home .consultation h6 {
@@ -424,6 +483,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .home .portfolio .portfolio-header h3 {
   margin: 2.5rem 0rem 2.5rem;
@@ -446,6 +508,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .about .connection .heading-wrapper p {
   max-width: 632px;
@@ -516,6 +581,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .about .our-work .snapshot-projects {
   margin-top: 6.25rem;
@@ -539,6 +607,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .about .benifits .benifits-detail {
   margin-top: 6.25rem;
@@ -583,6 +654,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: block;
 }
 .services-page .product-scale p {
@@ -619,6 +693,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .services-page .lasting-impact .impact-details {
   display: flex;
@@ -635,6 +712,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-size: 80px;
   font-weight: 800;
 }
@@ -650,6 +730,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .blog-page .blog p {
   max-width: 860px;
@@ -689,6 +772,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .blog-page .blog-post {
   display: flex;
@@ -743,6 +829,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .blog-detail .development h6 {
   margin: 60px 0px;
@@ -846,6 +935,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .consultation-page .consultation-body {
   display: flex;
@@ -945,6 +1037,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: block;
 }
 .career-page .find-job p {
@@ -990,6 +1085,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .career-page .career .career-positions {
   margin: 60px 0;
@@ -1021,6 +1119,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .career-page .career .career-positions ul a:hover::after {
   display: block;
@@ -1068,6 +1169,9 @@ button {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .career-page .job-form form {
   padding: 0 60px;
@@ -1147,4 +1251,128 @@ button {
   font-weight: 500;
   padding: 15px 100px;
   margin-top: 80px;
+}
+
+.web-development-page .programing-expert {
+  margin-bottom: 130px;
+}
+.web-development-page .programing-expert .image {
+  padding: 0;
+}
+.web-development-page .programing-expert .description {
+  padding-left: 40px;
+}
+.web-development-page .programing-expert .description h2 {
+  max-width: 600px;
+  margin: 30px 0 30px;
+}
+.web-development-page .programing-expert .description p {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+.web-development-page .programing-expert .description .tech-problem {
+  display: flex;
+}
+.web-development-page .programing-expert .description .tech-problem h6 {
+  max-width: 520px;
+  margin-left: 25px;
+}
+.web-development-page .project-failure {
+  margin-bottom: 130px;
+}
+.web-development-page .project-failure p {
+  font-size: 20px;
+  margin: 16px auto 20px;
+}
+.web-development-page .project-failure .work-policy {
+  display: flex;
+  align-items: center;
+  max-width: 630px;
+  margin-top: 40px;
+}
+.web-development-page .project-failure .work-policy .tick {
+  margin-right: 55px;
+}
+.web-development-page .project-failure .work-policy .policy-detail {
+  flex: 1;
+  font-size: 20px;
+  font-weight: 500;
+}
+.web-development-page .our-technology {
+  text-align: center;
+  margin-bottom: 130px;
+}
+.web-development-page .our-technology .snapshot-projects {
+  margin-top: 58px;
+}
+.web-development-page .our-technology .snapshot-projects .snapshot-projects-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.web-development-page .our-technology .snapshot-projects .snapshot-projects-list li:not(:last-child) {
+  margin-bottom: 40px;
+}
+.web-development-page .perks {
+  margin-bottom: 130px;
+}
+.web-development-page .perks h1 {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+.web-development-page .perks .integration {
+  display: flex;
+  max-width: 795px;
+}
+.web-development-page .perks .integration .perk-list-count {
+  display: flex;
+  flex-direction: column;
+}
+.web-development-page .perks .integration .perk-list-count span {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 80px;
+  font-weight: 800;
+}
+.web-development-page .perks .integration .perk-list-head {
+  position: relative;
+  padding-left: 3.625rem;
+}
+.web-development-page .perks .integration .perk-list-head::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 130px;
+  border: 2px solid #FFFFFF;
+  background: #FFFFFF;
+  top: 0;
+  left: 3%;
+}
+.web-development-page .perks .integration .perk-list-head p {
+  max-width: 640px;
+}
+
+.portfolio {
+  margin-top: 8.125rem;
+}
+.portfolio .portfolio-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio .portfolio-header h5 {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.portfolio .portfolio-header h3 {
+  margin: 2.5rem 0rem 2.5rem;
 }/*# sourceMappingURL=App.css.map */
