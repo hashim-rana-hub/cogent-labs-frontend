@@ -216,6 +216,63 @@ body {
   cursor: pointer;
 }
 
+.blog-grid {
+  display: grid;
+  margin-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas: "card-1 card-2 card-3" "card-4 card-5 card-6";
+}
+.blog-grid .card-1 {
+  grid-area: card-1;
+}
+.blog-grid .card-2 {
+  grid-area: card-2;
+}
+.blog-grid .card-3 {
+  grid-area: card-3;
+}
+.blog-grid .card-4 {
+  grid-area: card-4;
+}
+.blog-grid .card-5 {
+  grid-area: card-5;
+}
+.blog-grid .card-6 {
+  grid-area: card-6;
+}
+.blog-grid .card {
+  background: #000;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.blog-grid .card .card-body {
+  padding: 0px;
+}
+.blog-grid .card .card-body span {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog-grid .card .card-footer {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-grid .card .card-footer span {
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blog-grid .card .card-footer p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .footer {
   border-top: 1px solid #383838;
   margin-top: 3rem;
@@ -283,61 +340,60 @@ button {
   font-weight: 500 !important;
 }
 
-.consultation {
+.home .consultation {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 8.75rem;
 }
-.consultation h1 {
+.home .consultation h1 {
   font-size: 70px;
   font-weight: 800;
   line-height: 1.4;
 }
-.consultation h1 span {
+.home .consultation h1 span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
 }
-.consultation h6 {
+.home .consultation h6 {
   font-weight: 400;
   max-width: 1040px;
   margin: 0px auto auto;
 }
-.consultation .btn {
+.home .consultation .btn {
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
   font-size: 18px;
   padding: 12px 20px;
   margin: 35px auto 7.5rem;
 }
-
-.images-grid {
+.home .images-grid {
   display: grid;
   grid-gap: 20px;
   grid-template-areas: "item-1 item-2 item-3" "item-4 item-2 item-5";
 }
-.images-grid .item-1 {
+.home .images-grid .item-1 {
   grid-area: item-1;
 }
-.images-grid .item-2 {
+.home .images-grid .item-2 {
   grid-area: item-2;
 }
-.images-grid .item-3 {
+.home .images-grid .item-3 {
   grid-area: item-3;
 }
-.images-grid .item-4 {
+.home .images-grid .item-4 {
   grid-area: item-4;
 }
-.images-grid .item-5 {
+.home .images-grid .item-5 {
   grid-area: item-5;
 }
-.images-grid .image {
+.home .images-grid .image {
   position: relative;
   overflow: hidden;
 }
-.images-grid .image .overlays {
+.home .images-grid .image .overlays {
   position: absolute;
   left: 0;
   top: 0;
@@ -346,163 +402,165 @@ button {
   background: rgba(0, 0, 0, 0.4);
   transition: 0.3s all;
 }
-.images-grid .image:hover {
+.home .images-grid .image:hover {
   opacity: 0.7;
 }
-.images-grid .image:hover .overlays {
+.home .images-grid .image:hover .overlays {
   left: -100%;
 }
-.images-grid img {
+.home .images-grid img {
   width: 100%;
   height: 100%;
 }
-
-.portfolio {
+.home .portfolio {
   margin-top: 8.125rem;
 }
-.portfolio .portfolio-header {
+.home .portfolio .portfolio-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.portfolio .portfolio-header h5 {
+.home .portfolio .portfolio-header h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.portfolio .portfolio-header h3 {
+.home .portfolio .portfolio-header h3 {
   margin: 2.5rem 0rem 2.5rem;
 }
 
-.connection {
+.about .connection {
   margin-top: 7rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
 }
-.connection .heading-wrapper {
+.about .connection .heading-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
 }
-.connection .heading-wrapper h1 {
+.about .connection .heading-wrapper h1 {
   display: block;
   max-width: 620px;
 }
-.connection .heading-wrapper h1 span {
+.about .connection .heading-wrapper h1 span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.connection .heading-wrapper p {
+.about .connection .heading-wrapper p {
   max-width: 632px;
 }
-.connection .images {
+.about .connection .images {
   display: flex;
   margin: 6rem 0rem;
 }
-.connection .images .img-1 {
+.about .connection .images .img-1 {
   flex: 0 0 770px;
 }
-.connection .images .img-2 {
+.about .connection .images .img-2 {
   flex: 1;
 }
-.connection .images .img-2 img {
+.about .connection .images .img-2 img {
   height: 100%;
   width: 100%;
 }
-
-.ceo {
+.about .ceo {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
   margin-top: 8rem;
 }
-.ceo h1 {
+.about .ceo h1 {
   font-weight: 600;
 }
-.ceo h6 {
+.about .ceo h6 {
   font-weight: 600;
 }
-.ceo .we-are-strong {
+.about .ceo .we-are-strong {
   align-items: center;
   margin-bottom: 4rem;
 }
-.ceo .ceo-sec {
+.about .ceo .ceo-sec {
   align-items: flex-start;
   margin-top: 6rem;
   margin-bottom: 11rem;
 }
-.ceo .ceo-sec .ceo-detail {
+.about .ceo .ceo-sec .ceo-detail {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 5rem;
 }
-.ceo .ceo-sec .ceo-detail img {
-  border-radius: 50%;
+.about .ceo .ceo-sec .ceo-detail .ceo-img {
   width: 120px;
   height: 120px;
 }
-.ceo .ceo-sec .ceo-detail h3 {
+.about .ceo .ceo-sec .ceo-detail .ceo-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .ceo .ceo-sec .ceo-detail h3 {
   font-size: 24px;
   font-weight: 700;
 }
-.ceo .ceo-sec .ceo-detail span {
+.about .ceo .ceo-sec .ceo-detail span {
   font-size: 18px;
   font-weight: 400;
 }
-
-.our-work {
+.about .our-work {
   margin-top: 8.125rem;
   text-align: center;
 }
-.our-work h5 {
+.about .our-work h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.our-work .snapshot-projects {
+.about .our-work .snapshot-projects {
   margin-top: 6.25rem;
 }
-.our-work .snapshot-projects .snapshot-projects-list {
+.about .our-work .snapshot-projects .snapshot-projects-list {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
 }
-.our-work .snapshot-projects .snapshot-projects-list li:not(:last-child) {
+.about .our-work .snapshot-projects .snapshot-projects-list li:not(:last-child) {
   margin-bottom: 3rem;
 }
-
-.benifits {
+.about .benifits {
   margin-bottom: 10.5rem;
 }
-.benifits .company-benefits {
+.about .benifits .company-benefits {
   text-align: center;
   margin: 5rem 0rem;
 }
-.benifits .company-benefits h5 {
+.about .benifits .company-benefits h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.benifits .benifits-detail {
+.about .benifits .benifits-detail {
   margin-top: 6.25rem;
 }
-.benifits .benifits-detail .benifits-list {
+.about .benifits .benifits-detail .benifits-list {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   width: 100%;
 }
-.benifits .benifits-detail .benifits-list:not(:last-child) {
+.about .benifits .benifits-detail .benifits-list:not(:last-child) {
   margin-bottom: 20px;
 }
-.benifits .benifits-detail .benifits-list li {
+.about .benifits .benifits-detail .benifits-list li {
   width: 48%;
   border-bottom: 0.5px solid #7B7B7B;
 }
-.benifits .benifits-detail .benifits-list li p {
+.about .benifits .benifits-detail .benifits-list li p {
   text-align: justify;
   padding-bottom: 30px;
 }
-.benifits .benifits-detail .benifits-list .title {
+.about .benifits .benifits-detail .benifits-list .title {
   display: flex;
   justify-content: space-between;
   background: linear-gradient(to bottom, #20D4FE 0%, #B722FF 100%);
@@ -512,307 +570,272 @@ button {
   margin-bottom: 24px;
 }
 
-.product-scale {
+.services-page .product-scale {
   margin-top: 8.75rem;
   margin-bottom: 8rem;
 }
-.product-scale h1 {
+.services-page .product-scale h1 {
   text-align: center;
   font-size: 70px;
   font-weight: 800;
 }
-.product-scale h1 span {
+.services-page .product-scale h1 span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
 }
-.product-scale p {
+.services-page .product-scale p {
   max-width: 750px;
   margin: 24px auto 60px;
 }
-
-.project-failure {
+.services-page .project-failure {
   margin-top: 8.75rem;
 }
-.project-failure p {
+.services-page .project-failure p {
   font-size: 20px;
   margin: 16px auto 20px;
 }
-.project-failure .work-policy {
+.services-page .project-failure .work-policy {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 630px;
   margin-top: 40px;
 }
-.project-failure .work-policy .tick {
+.services-page .project-failure .work-policy .tick {
   flex: 0 0 35px;
   margin-right: 55px;
 }
-.project-failure .work-policy .policy-detail {
+.services-page .project-failure .work-policy .policy-detail {
   flex: 1;
   font-size: 20px;
   font-weight: 500;
 }
-
-.lasting-impact {
+.services-page .lasting-impact {
   margin: 8.125rem 0px 3.75rem;
 }
-.lasting-impact h2 span {
+.services-page .lasting-impact h2 span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.lasting-impact .impact-details {
+.services-page .lasting-impact .impact-details {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.lasting-impact .impact-details p {
+.services-page .lasting-impact .impact-details p {
   text-align: left;
 }
-
-.our-qualities {
+.services-page .our-qualities {
   text-align: left;
 }
-.our-qualities span {
+.services-page .our-qualities span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 80px;
   font-weight: 800;
 }
-.our-qualities h3 {
+.services-page .our-qualities h3 {
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.blog {
+.blog-page .blog {
   text-align: center;
 }
-.blog h1 {
+.blog-page .blog h1 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.blog p {
+.blog-page .blog p {
   max-width: 860px;
   margin: 10px auto;
 }
-
-.recent-blog {
+.blog-page .recent-blog {
   margin-top: 90px;
   text-align: center;
 }
-.recent-blog .card-grid {
+.blog-page .recent-blog .card-grid {
   display: grid;
   margin-top: 60px;
   grid-gap: 20px;
   grid-template-areas: "card-1 card-2" "card-1 card-3";
 }
-.recent-blog .card-grid .card-1 {
+.blog-page .recent-blog .card-grid .card-1 {
   grid-area: card-1;
 }
-.recent-blog .card-grid .card-2 {
+.blog-page .recent-blog .card-grid .card-2 {
   grid-area: card-2;
 }
-.recent-blog .card-grid .card-3 {
+.blog-page .recent-blog .card-grid .card-3 {
   grid-area: card-3;
 }
-.recent-blog .card-grid .card {
+.blog-page .recent-blog .card-grid .card {
   background: #000;
   text-align: left;
   cursor: pointer;
   border-radius: 50px;
 }
-.recent-blog .card-grid .card .card-body {
+.blog-page .recent-blog .card-grid .card .card-body {
   padding: 0px;
 }
-.recent-blog .card-grid .card .card-body span {
+.blog-page .recent-blog .card-grid .card .card-body span {
   font-size: 30px;
   font-weight: 700;
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.blog-post {
+.blog-page .blog-post {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin-top: 8.125rem;
 }
-.blog-post .input-group {
+.blog-page .blog-post .input-group {
   max-width: 730px;
   height: 10vh;
   margin-top: 3.75rem;
 }
-.blog-post .input-group input {
+.blog-page .blog-post .input-group input {
   font-size: 18px;
   color: #FFFFFF;
   background: #000;
   border: 1px solid #FFFFFF;
   border-radius: 0;
 }
-.blog-post .input-group input::-moz-placeholder {
-  color: white;
+.blog-page .blog-post .input-group input::-moz-placeholder {
+  color: #FFFFFF;
 }
-.blog-post .input-group input:-ms-input-placeholder {
-  color: white;
+.blog-page .blog-post .input-group input:-ms-input-placeholder {
+  color: #FFFFFF;
 }
-.blog-post .input-group input::placeholder {
-  color: white;
+.blog-page .blog-post .input-group input::placeholder {
+  color: #FFFFFF;
 }
-.blog-post .input-group input:focus {
+.blog-page .blog-post .input-group input:focus {
   box-shadow: none;
 }
-.blog-post button {
+.blog-page .blog-post .btn {
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
   margin: 1.875rem 0rem 8.125rem;
   padding: 15px 70px;
 }
 
-.blog-grid {
-  display: grid;
-  margin-top: 60px;
-  grid-gap: 20px;
-  grid-template-areas: "card-1 card-2 card-3" "card-4 card-5 card-6";
-}
-.blog-grid .card-1 {
-  grid-area: card-1;
-}
-.blog-grid .card-2 {
-  grid-area: card-2;
-}
-.blog-grid .card-3 {
-  grid-area: card-3;
-}
-.blog-grid .card-4 {
-  grid-area: card-4;
-}
-.blog-grid .card-5 {
-  grid-area: card-5;
-}
-.blog-grid .card-6 {
-  grid-area: card-6;
-}
-.blog-grid .card {
-  background: #000;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 50px;
-}
-.blog-grid .card .card-body {
-  padding: 0px;
-}
-.blog-grid .card .card-body span {
-  font-size: 30px;
-  font-weight: 700;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.blog-grid .card .card-footer {
-  padding: 0px;
-  display: flex;
-  justify-content: space-between;
-}
-.blog-grid .card .card-footer span {
-  font-size: 16px;
-  font-weight: 600;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.blog-grid .card .card-footer p {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-h6 {
+.blog-detail h6 {
   font-weight: 400;
 }
-
-.development {
+.blog-detail .development {
   display: flex;
   flex-direction: column;
 }
-.development .development-header {
+.blog-detail .development .development-header {
   text-align: center;
   margin-bottom: 60px;
 }
-.development .development-header h1 {
+.blog-detail .development .development-header h1 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.development h6 {
+.blog-detail .development h6 {
   margin: 60px 0px;
 }
-
-.blog-description {
+.blog-detail .blog-description {
   margin-bottom: 60px;
 }
-.blog-description h3 {
+.blog-detail .blog-description h3 {
   margin-bottom: 30px;
 }
-.blog-description .quote {
+.blog-detail .blog-description .quote {
   display: flex;
   flex-direction: column;
   padding: 3.75rem 8.125rem;
 }
-.blog-description .quote .quote-header {
+.blog-detail .blog-description .quote .quote-header {
   display: flex;
 }
-.blog-description .quote .quote-header span {
+.blog-detail .blog-description .quote .quote-header span {
   position: relative;
   font-size: 36px;
   font-weight: 300;
+  padding-left: 5.625rem;
 }
-.blog-description .quote .quote-header span::before {
+.blog-detail .blog-description .quote .quote-header span::before {
   content: "";
   position: absolute;
+  display: block;
   width: 70px;
   border: 2px solid #FFFFFF;
-  display: block;
+  background: #FFFFFF;
+  top: 50%;
+  left: 6%;
 }
-.blog-description .quote blockquote {
+.blog-detail .blog-description .quote blockquote {
   font-size: 48px;
   font-weight: 700;
   max-width: 800px;
 }
-.blog-description .images {
+.blog-detail .blog-description .images {
   display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
+  margin: 60px 0 40px;
 }
-.blog-description .images h6 {
-  padding-top: 40px;
+.blog-detail .blog-description .images .img-1 {
+  flex: 0 0 580px;
 }
-
-.video-blog h3 {
+.blog-detail .blog-description .images .img-2 {
+  flex: 1;
+}
+.blog-detail .blog-description .images:not(:last-child) {
+  margin-right: 80px;
+}
+.blog-detail .blog-description .images-footer {
+  position: relative;
+  padding-left: 90px;
+}
+.blog-detail .blog-description .images-footer::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  display: block;
+  top: 50%;
+  left: 0;
+  background: #FFFFFF;
+}
+.blog-detail .video-blog h3 {
   padding: 30px 0px 60px;
 }
-.video-blog iframe {
+.blog-detail .video-blog iframe {
   width: 100%;
   height: 500px;
 }
-.video-blog .video-blog-footer {
+.blog-detail .video-blog .video-blog-footer {
   margin: 60px 0px 130px;
 }
-.video-blog .video-blog-footer .blog-writer {
+.blog-detail .video-blog .video-blog-footer .blog-writer {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-.video-blog .video-blog-footer .blog-writer img {
-  border-radius: 50%;
+.blog-detail .video-blog .video-blog-footer .blog-writer .ceo-img {
   width: 120px;
   height: 120px;
   margin-right: 30px;
+}
+.blog-detail .video-blog .video-blog-footer .blog-writer .ceo-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .consultation-page {
@@ -928,8 +951,8 @@ h6 {
   max-width: 860px;
 }
 .career-page .find-job .input-group {
-  max-width: 730px;
-  height: 10vh;
+  width: 760px;
+  height: 66px;
   margin-top: 2rem;
 }
 .career-page .find-job .input-group input {
@@ -940,13 +963,13 @@ h6 {
   border-radius: 0;
 }
 .career-page .find-job .input-group input::-moz-placeholder {
-  color: white;
+  color: #FFFFFF;
 }
 .career-page .find-job .input-group input:-ms-input-placeholder {
-  color: white;
+  color: #FFFFFF;
 }
 .career-page .find-job .input-group input::placeholder {
-  color: white;
+  color: #FFFFFF;
 }
 .career-page .find-job .input-group input:focus {
   box-shadow: none;
@@ -957,30 +980,27 @@ h6 {
   margin: 1.875rem 0rem 7rem;
   padding: 15px 70px;
 }
-
-.positions {
-  display: flex;
+.career-page .positions {
   margin-bottom: 150px;
 }
-
-.career .career-header {
+.career-page .career .career-header {
   text-align: center;
 }
-.career .career-header h5 {
+.career-page .career .career-header h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.career .career-positions {
+.career-page .career .career-positions {
   margin: 60px 0;
 }
-.career .career-positions ul {
+.career-page .career .career-positions ul {
   display: flex;
   justify-content: space-between;
   padding: 0;
   list-style-type: none;
 }
-.career .career-positions ul a {
+.career-page .career .career-positions ul a {
   font-size: 30px !important;
   font-weight: 700 !important;
   font-size: 24px;
@@ -989,7 +1009,7 @@ h6 {
   text-decoration: none;
   position: relative;
 }
-.career .career-positions ul a:after {
+.career-page .career .career-positions ul a:after {
   content: "";
   position: absolute;
   display: none;
@@ -997,92 +1017,134 @@ h6 {
   border: 1px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.career .career-positions ul a:hover {
+.career-page .career .career-positions ul a:hover {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.career .career-positions ul a:hover::after {
+.career-page .career .career-positions ul a:hover::after {
   display: block;
 }
-.career .career-positions ul li:not(:last-child) {
+.career-page .career .career-positions ul li:not(:last-child) {
   margin-right: 24px;
 }
-.career .jobs-list ul {
+.career-page .career .jobs-list ul {
   list-style-type: none;
   padding: 0;
 }
-.career .jobs-list ul li {
+.career-page .career .jobs-list ul li {
   display: flex;
   justify-content: space-between;
   padding-bottom: 35px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
-.career .jobs-list ul li .job-title span {
+.career-page .career .jobs-list ul li .job-title span {
   font-size: 30px;
   font-weight: 700;
 }
-.career .jobs-list ul li .job-title p {
+.career-page .career .jobs-list ul li .job-title p {
   font-weight: 500;
 }
-.career .jobs-list ul li button {
+.career-page .career .jobs-list ul li button {
   border: 1px solid transparent;
   padding: 10px 50px;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.career .jobs-list ul li button:hover {
+.career-page .career .jobs-list ul li button:hover {
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
 }
-.career .jobs-list ul li:not(:last-child) {
+.career-page .career .jobs-list ul li:not(:last-child) {
   margin-bottom: 35px;
 }
-
-.job-form {
+.career-page .job-form {
   margin-bottom: 130px;
 }
-.job-form .job-form-header {
+.career-page .job-form .job-form-header {
   margin: 130px 0 60px;
   text-align: center;
 }
-.job-form .job-form-header h5 {
+.career-page .job-form .job-form-header h5 {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.job-form form {
+.career-page .job-form form {
   padding: 0 60px;
 }
-.job-form form .form-group {
+.career-page .job-form form .form-group {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.job-form form .form-group .form-group-column input {
-  background: #000;
-  color: #FFFFFF;
-  box-shadow: none;
+.career-page .job-form form .form-group:not(:last-child) {
+  margin-bottom: 60px;
 }
-.job-form form .form-group .form-group-column select {
-  background: #000;
-  color: #FFFFFF;
-  box-shadow: none;
-}
-.job-form form .form-group label {
+.career-page .job-form form .form-group label {
   font-size: 30px;
   font-weight: 500;
+  min-width: 290px;
 }
-.job-form form .file-upload-wrapper input {
-  border: 2px dashed #92b0b3;
+.career-page .job-form form .form-group input {
+  width: 640px;
+  height: 66px;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #000;
+  border: 1px solid #FFFFFF;
+  border-radius: 0;
   border-radius: 6px;
-  transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
-  padding: 120px 0px 85px 35%;
-  text-align: center !important;
-  margin: 0;
-  width: 100% !important;
 }
-.job-form form button {
+.career-page .job-form form .form-group input::-moz-placeholder {
+  color: #FFFFFF;
+}
+.career-page .job-form form .form-group input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+.career-page .job-form form .form-group input::placeholder {
+  color: #FFFFFF;
+}
+.career-page .job-form form .form-group select {
+  width: 640px;
+  height: 66px;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #000;
+  border: 1px solid #FFFFFF;
+  border-radius: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.career-page .job-form form .file-upload-wrapper {
+  position: relative;
+  height: 190px;
+  width: 640px;
+  border: 1px dashed #FFFFFF;
+  border-radius: 6px;
+}
+.career-page .job-form form .file-upload-wrapper input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.career-page .job-form form .file-upload-wrapper .file-upload-svg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.career-page .job-form form .btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.career-page .job-form form .btn-wrapper button {
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
+  font-size: 24px;
+  font-weight: 500;
   padding: 15px 100px;
   margin-top: 80px;
 }/*# sourceMappingURL=App.css.map */

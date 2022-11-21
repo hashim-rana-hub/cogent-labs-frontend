@@ -28,7 +28,7 @@ body {
         linear-gradient($bg-dark,$bg-dark) padding-box,
         linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
       }
-      &:hover{
+      &:hover {
         @include gradient;
           &::after {
             display: block;
@@ -212,6 +212,48 @@ body {
     }
   }
 }
+.blog-grid {
+  display: grid;
+  margin-top: 60px;
+  grid-gap: 20px;
+  grid-template-areas:
+  'card-1 card-2 card-3'
+  'card-4 card-5 card-6';
+  .card-1 { grid-area: card-1; }
+  .card-2 { grid-area: card-2; }
+  .card-3 { grid-area: card-3; }
+  .card-4 { grid-area: card-4; }
+  .card-5 { grid-area: card-5; }
+  .card-6 { grid-area: card-6; }
+    .card {
+      background: $bg-dark;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 50px;
+      .card-body {
+        padding: 0px;
+        span {
+          font-size: 30px;
+          font-weight: 700;
+          @include gradient;
+        }
+      }
+      .card-footer {
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        span {
+        font-size: 16px;
+        font-weight: 600;
+        @include gradient;
+        }
+        p {
+        font-size: 16px;
+        font-weight: 300;
+        }
+      }
+    }
+  }
 .footer {
   border-top: 1px solid #383838;
   margin-top: 3rem;

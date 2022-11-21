@@ -1,127 +1,134 @@
-.connection {
-  margin-top: 7rem;
-  border-bottom: 2px solid #FFFFFF40;
-  .heading-wrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3rem;
+.about{
+  .connection {
+    margin-top: 7rem;
+    border-bottom: 2px solid #FFFFFF40;
+    .heading-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+      h1 {
+        display: block;
+        max-width: 620px;
+        span {
+          @include gradient;
+        }
+      }
+      p {
+        max-width: 632px;
+      }
+    }
+    .images {
+      display: flex;
+      margin: 6rem 0rem;
+      .img-1 {
+        flex: 0 0 770px;
+      }
+      .img-2 {
+        flex: 1;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .ceo {
+    border-bottom: 2px solid #FFFFFF40;
+    margin-top: 8rem;
     h1 {
-      display: block;
-      max-width: 620px;
-      span {
+      font-weight: 600;
+    }
+    h6 {
+      font-weight: 600;
+    }
+    .we-are-strong {
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .ceo-sec {
+      align-items: flex-start;
+      margin-top: 6rem;
+      margin-bottom: 11rem;
+      .ceo-detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+        .ceo-img {
+          width: 120px;
+          height: 120px;
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        h3 {
+          font-size: 24px;
+          font-weight: 700;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .our-work {
+    margin-top: 8.125rem;
+    text-align: center;
+      h5 {
+        @include gradient;     
+      }
+    .snapshot-projects {
+      margin-top: 6.25rem;
+      .snapshot-projects-list {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        li:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+  .benifits {
+    margin-bottom: 10.5rem;
+    .company-benefits {
+      text-align: center;
+      margin: 5rem 0rem;
+      h5 {
         @include gradient;
       }
     }
-    p {
-      max-width: 632px;
-    }
-  }
-  .images {
-    display: flex;
-    margin: 6rem 0rem;
-    .img-1 {
-      flex: 0 0 770px;
-    }
-    .img-2 {
-      flex: 1;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-}
-.ceo {
-  border-bottom: 2px solid #FFFFFF40;
-  margin-top: 8rem;
-  h1{
-    font-weight: 600;
-  }
-  h6 {
-    font-weight: 600;
-  }
-  .we-are-strong {
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-  .ceo-sec {
-    align-items: flex-start;
-    margin-top: 6rem;
-    margin-bottom: 11rem;
-    .ceo-detail {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      margin-bottom: 5rem;
-      img {
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-      }
-      h3 {
-        font-size: 24px;
-        font-weight: 700;
-      }
-      span {
-        font-size: 18px;
-        font-weight: 400;
-      }
-    }
-  }
-}
-.our-work {
-  margin-top: 8.125rem;
-  text-align: center;
-    h5 {
-      @include gradient;     
-    }
-  .snapshot-projects {
-    margin-top: 6.25rem;
-    .snapshot-projects-list{
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      li:not(:last-child) {
-        margin-bottom: 3rem;
-      }
-    }
-  }
-}
-.benifits {
-  margin-bottom: 10.5rem;
-  .company-benefits {
-    text-align: center;
-    margin: 5rem 0rem;
-    h5 {
-      @include gradient;
-    }
-  }
-  .benifits-detail{
-    margin-top: 6.25rem;
-    .benifits-list{
-      display: flex;
-      justify-content: space-between;
-      list-style-type: none;
-      width: 100%;
-      &:not(:last-child){
-        margin-bottom: 20px;
-      }
-      li{
-        width:48%;
-        border-bottom: 0.5px solid #7B7B7B;
-        p{
-          text-align: justify;
-          padding-bottom: 30px;
-        }
-      }
-      .title{
+    .benifits-detail {
+      margin-top: 6.25rem;
+      .benifits-list {
         display: flex;
         justify-content: space-between;
-        background: linear-gradient(to bottom, #20D4FE 0% , #B722FF 100%);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 24px;
+        list-style-type: none;
+        width: 100%;
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+        li {
+          width:48%;
+          border-bottom: 0.5px solid #7B7B7B;
+          p {
+            text-align: justify;
+            padding-bottom: 30px;
+          }
+        }
+        .title {
+          display: flex;
+          justify-content: space-between;
+          background: linear-gradient(to bottom, #20D4FE 0% , #B722FF 100%);
+          background-clip: border-box;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 24px;
+        }
       }
     }
   }
