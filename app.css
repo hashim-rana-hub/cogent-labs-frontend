@@ -1320,15 +1320,18 @@ button {
   max-width: 700px;
   margin-bottom: 60px;
 }
-.web-development-page .perks .integration {
+.web-development-page .perks .perks-detail {
   display: flex;
   max-width: 795px;
 }
-.web-development-page .perks .integration .perk-list-count {
+.web-development-page .perks .perks-detail:not(:last-child) {
+  margin-bottom: 70px;
+}
+.web-development-page .perks .perks-detail .perk-list-count {
   display: flex;
   flex-direction: column;
 }
-.web-development-page .perks .integration .perk-list-count span {
+.web-development-page .perks .perks-detail .perk-list-count span {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1338,11 +1341,11 @@ button {
   font-size: 80px;
   font-weight: 800;
 }
-.web-development-page .perks .integration .perk-list-head {
+.web-development-page .perks .perks-detail .perk-list-head {
   position: relative;
   padding-left: 3.625rem;
 }
-.web-development-page .perks .integration .perk-list-head::before {
+.web-development-page .perks .perks-detail .perk-list-head::before {
   content: "";
   position: absolute;
   display: block;
@@ -1353,7 +1356,7 @@ button {
   top: 0;
   left: 3%;
 }
-.web-development-page .perks .integration .perk-list-head p {
+.web-development-page .perks .perks-detail .perk-list-head p {
   max-width: 640px;
 }
 

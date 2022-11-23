@@ -59,28 +59,30 @@
       }
     }
   }
-  .perks{
+  .perks {
     margin-bottom: 130px;
-    h1{
+    h1 {
       max-width: 700px;
       margin-bottom: 60px;
     }
-    .integration{
+    .perks-detail {
       display: flex;
       max-width: 795px;
-      .perk-list-count{
+      &:not(:last-child){
+        margin-bottom: 70px;
+      }
+      .perk-list-count {
         display: flex;
         flex-direction: column;
-        span{
+        span {
           @include gradient;
           font-size: 80px;
           font-weight: 800;
         }
       }
-      .perk-list-head{
+      .perk-list-head {
         position: relative;
         padding-left: 3.625rem;
-
         &::before {
           content:'';
           position: absolute;
@@ -92,7 +94,7 @@
           top: 0;
           left: 3%;
         }
-        p{
+        p {
           max-width: 640px;
         }
       }
