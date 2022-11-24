@@ -1,28 +1,29 @@
-.web-development-page {
+.web-development {
   .programing-expert {
-    margin-bottom: 130px;
+    margin: 6.6875rem 0 8.125rem;
     .image {
       padding: 0;
     }
     .description {
-      padding-left: 40px;
+      padding-left: 2.5rem;
       h2 {
         max-width: 600px;
-        margin: 30px 0 30px;
+        margin: 1.875rem 0;
       }
       p {
         max-width: 600px;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
       }
       .tech-problem {
         display: flex;
         h6 {
           max-width: 520px;
-          margin-left: 25px ;
+          margin-left: 1.5625rem ;
         }
       }
     }
   }
+
   .project-failure {
     margin-bottom: 130px;
     p {
@@ -75,7 +76,6 @@
         display: flex;
         flex-direction: column;
         span {
-          @include gradient;
           font-size: 80px;
           font-weight: 800;
         }
@@ -92,7 +92,7 @@
           border: 2px solid $primary;
           background:$primary;
           top: 0;
-          left: 3%;
+          left: 30px;
         }
         p {
           max-width: 640px;

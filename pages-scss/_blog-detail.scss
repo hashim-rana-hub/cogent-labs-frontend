@@ -1,4 +1,5 @@
 .blog-detail{
+  margin-top: 6.6875rem;
   h6 {
     font-weight: 400;
   }
@@ -11,20 +12,31 @@
       h1{
         @include gradient;
       }
+      span{
+        margin-top: 8px;
+      }
+    }
+    .image-wrapper{
+      height: 500px;
+      width: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+      }
     }
     h6 {
-      margin: 60px 0px;
+      margin: 3.75rem 0;
     }
   }
   .blog-description {
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
     h3 {
-      margin-bottom: 30px;
+      margin-bottom: 1.875rem;
     }
     .quote {
       display: flex;
       flex-direction: column;
-      padding: 3.75rem 8.125rem;
+      padding: 3.75rem 8.75rem;
       .quote-header {
         display: flex;
         span {
@@ -32,6 +44,7 @@
           font-size: 36px;
           font-weight: 300;
           padding-left: 5.625rem;
+          margin-bottom: 1.5rem;
           &::before {
             content:'';
             position: absolute;
@@ -40,33 +53,43 @@
             border: 2px solid $primary;
             background:$primary;
             top: 50%;
-            left: 6%;
+            transform: translateY(-50%);
+            left: 10px;
           }
         }
       }
       blockquote {
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 700;
         max-width: 800px;
       }
     }
-    .images {
+    .image-wrapper {
       display: flex;
-      margin: 60px 0 40px;
-      .img-1{
-       flex: 0 0 580px;
+      margin: 3.75rem 0 2.5rem;
+      .img-left {
+       flex: 0 0 50%;
+       margin-right: 5rem;
+       img{
+        height: 100%;
+        width: 100%;
+       }
       }
-      .img-2{
+      .img-right {
         flex: 1;
+        img{
+          height: 100%;
+          width: 100%;
+        }
       }
       &:not(:last-child){
-        margin-right: 80px;
+        margin-right: 5rem;
       }
 
     }
-    .images-footer {
+    .img-caption {
       position: relative;
-      padding-left: 90px;
+      padding-left: 5.625rem;
       &::before {
         content:'';
         position: absolute;
@@ -75,6 +98,7 @@
         color: $primary;
         display: block;
         top: 50%;
+        transform: translateY(-50%);
         left: 0;
         background:$primary;
       }
@@ -82,13 +106,17 @@
   }
   .video-blog {
     h3 {
-      padding: 30px 0px 60px;
+      padding: 3.75rem 0px 1.875rem;
     }
-    iframe {
+    .video{
       width: 100%;
       height: 500px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
     }
-    .video-blog-footer {
+    .written-by {
       margin: 60px 0px 130px;
       .blog-writer {
         display: flex;
@@ -105,7 +133,13 @@
             object-fit: cover;
           }
         }
+        h6{
+          margin-bottom: 10px;
+        }
       }
     }
+  }
+  .contact-us{
+    margin-top: 6.25rem;
   }
 }

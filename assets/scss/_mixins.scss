@@ -8,12 +8,12 @@
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border:none;
 }
-@mixin a-tag {
-  font-size: 24px;
-  font-weight: 500;
-  color: $primary;
-  text-decoration: none;
-}
+// @mixin a-tag {
+//   font-size: 24px;
+//   font-weight: 500;
+//   color: $primary;
+//   text-decoration: none;
+// }
 @mixin span {
   font-size: 40px;
   font-weight: 700px;
@@ -22,12 +22,10 @@
 @mixin truncate($lines,$lh: 1.2,$spacer:0) {
   line-height: $lh;
   max-height: $lh * $lines + $spacer + em;
-  // overflow: hidden;
   text-overflow: ellipsis;
   text-overflow: -o-ellipsis-lastline;
   display: -webkit-box;
   -webkit-line-clamp: $lines;
-  /* number of lines to show */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

@@ -1,10 +1,10 @@
 .services-page{
   .product-scale {
-    margin-top: 8.75rem;
-    margin-bottom: 8rem;
+    margin-top: 6.6875rem;
+    margin-bottom: 8.125rem;
     h1 {
       text-align: center;
-      font-size: 70px;
+      font-size: 4.375rem;
       font-weight: 800;
       span {
         @include gradient;
@@ -12,35 +12,36 @@
       }
     }
     p {
+      text-align: center;
       max-width: 750px;
-      margin: 24px auto 60px;
+      margin: 1.5rem auto 3.75rem;
     }
   }
   .project-failure {
     margin-top: 8.75rem;
     p {
       font-size: 20px;
-      margin: 16px auto 20px;
+      margin: 1rem auto 3.75rem;
     }
     .work-policy {
       display: flex;
       align-items: center;
       justify-content: center;
       max-width: 630px;
-      margin-top: 40px;
+      margin-top: 2.5rem;
       .tick {
         flex: 0 0 35px;
         margin-right: 55px;
       }
       .policy-detail {
         flex: 1;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 500;
       }
     }
   }
   .lasting-impact {
-    margin: 8.125rem 0px 3.75rem;
+    margin: 8.125rem 0 3.75rem;
     h2 {
       span {
         @include gradient;
@@ -64,7 +65,10 @@
     }
     h3 {
       font-weight: 600;
-      margin-bottom: 8px;
+      margin: 25px 0 8px;
     }
+  }
+  .contact-us{
+    margin-top: 6.25rem;
   }
 }

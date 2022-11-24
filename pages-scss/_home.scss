@@ -3,11 +3,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 8.75rem;
+    margin-top: 6.6875rem;
     h1 {
       font-size: 70px;
       font-weight: 800;
       line-height: 1.4;
+      margin-bottom: 1.875rem;
       span {
         @include gradient;
         display: block;
@@ -20,57 +21,89 @@
     }
     .btn {
       @include button;
-      font-size: 18px;
+      font-size: 1.125rem;
       padding: 12px 20px;
-      margin: 35px auto 7.5rem;
+      margin: 2.1875rem auto 6.5rem;
     }
   }
-  .images-grid {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-    'item-1 item-2 item-3'
-    'item-4 item-2 item-5';
-    .item-1 { grid-area: item-1; }
-    .item-2 { grid-area: item-2; }
-    .item-3 { grid-area: item-3; }
-    .item-4 { grid-area: item-4; }
-    .item-5 { grid-area: item-5; }
-    .image {
-      position: relative;
-      overflow: hidden;
-      .overlays {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        transition: .3s all;
-      }
-      &:hover {
-        opacity: 0.7;
-        .overlays {
-        left: -100%;
+}
+.portfolio {
+  margin-top: 8.125rem;
+  .portfolio-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h5 {
+      @include gradient;
+    }
+    h3 {
+      margin: 2.5rem 0 2.5rem;
+    }
+  }
+}
+.testimonial {
+  margin-top: 123px;
+  text-align: center;
+  h5{
+    @include gradient;
+    margin: 0 auto;
+  }
+  h3 {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  .slider{
+    margin-top: 3.75rem;
+    .slider-flex {
+      display: flex;
+      .slider-col {
+        display: flex;
+        .slider-thumbs {
+          .swiper-container {
+            .swiper-wrapper {
+              .swiper-slide {
+                .slider-image {
+                  width: 420px;
+                  .person {
+                    display: flex;
+                    padding: 20px;
+                    max-width: 420px;
+                    background: #2D2D2D;
+                    margin-bottom: 2.1875rem;
+                    height: 107px;
+                    border-radius: 6px;
+                    &:active{
+                      background: #222222AD;
+                    }
+                    .icon {
+                      margin-right: 20px;
+                    }
+                    .introduction {
+                      text-align: start;
+                      span{
+                        font-size: 18px;
+                        font-weight: 700;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
-    }
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .portfolio {
-    margin-top: 8.125rem;
-    .portfolio-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h5 {
-        @include gradient;
-      }
-      h3 {
-        margin: 2.5rem 0rem 2.5rem;
+      .slider-images {
+        text-align: start;
+        max-width: 530px;
+        margin-left: 8.125rem;
+        h6 {
+          margin-bottom: 40px;
+        }
+        p {
+          &:not(:last-child){
+            margin-bottom: 1rem;
+          }
+        }
       }
     }
   }
