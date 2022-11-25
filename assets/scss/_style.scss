@@ -1,3 +1,6 @@
+*{
+  font-family:SF pro Display;
+}
 body {
   background-color: $bg-dark;
   color: $primary;
@@ -143,17 +146,18 @@ body {
   }
   .set-us-apart {
     margin-top: 8.125rem;
-    .image-wrapper{
+    column-gap: 1.5rem;
+    .image-wrapper {
       height: 616px;
       width: 100%;
-      img{
+      img {
         height: 100%;
         width: 100%;
       }
     }
-    h3{
+    h3 {
       margin-top: 0px;
-      margin-bottom: 70px;
+      margin-bottom: 4.375rem;
     }
     .set-us-apart-listing {
       .set-us-apart-item {
@@ -189,7 +193,7 @@ body {
 }
 
 .contact-us {
-  margin: 10rem 0 5.3125rem ;
+  margin: 10rem auto 5.3125rem ;
   padding: 0rem 5rem;
   .description {
     margin-top: 2.5rem;

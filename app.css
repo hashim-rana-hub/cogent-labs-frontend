@@ -1,3 +1,7 @@
+* {
+  font-family: SF pro Display;
+}
+
 body {
   background-color: #000;
   color: #FFFFFF;
@@ -152,6 +156,8 @@ body {
 }
 .about-us .set-us-apart {
   margin-top: 8.125rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
 }
 .about-us .set-us-apart .image-wrapper {
   height: 616px;
@@ -163,7 +169,7 @@ body {
 }
 .about-us .set-us-apart h3 {
   margin-top: 0px;
-  margin-bottom: 70px;
+  margin-bottom: 4.375rem;
 }
 .about-us .set-us-apart .set-us-apart-listing .set-us-apart-item {
   display: flex;
@@ -195,7 +201,7 @@ body {
 }
 
 .contact-us {
-  margin: 10rem 0 5.3125rem;
+  margin: 10rem auto 5.3125rem;
   padding: 0rem 5rem;
 }
 .contact-us .description {
@@ -413,6 +419,10 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: SF pro Display;
+  src: url(./font/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
 .home .consultation {
   display: flex;
   flex-direction: column;
@@ -468,7 +478,7 @@ a {
 }
 
 .testimonial {
-  margin-top: 123px;
+  margin-top: 7.6875rem;
   text-align: center;
 }
 .testimonial h5 {
@@ -481,7 +491,7 @@ a {
   margin: 0 auto;
 }
 .testimonial h3 {
-  max-width: 530px;
+  max-width: 525px;
   margin: 0 auto;
 }
 .testimonial .slider {
@@ -574,12 +584,12 @@ a {
 }
 .about .ceo h1 {
   font-weight: 600;
+  margin-top: -20px;
 }
 .about .ceo h6 {
   font-weight: 600;
 }
 .about .ceo .we-are-strong {
-  align-items: center;
   margin-bottom: 4rem;
 }
 .about .ceo .we-are-strong p {
@@ -767,6 +777,9 @@ a {
 .services-page .our-qualities h3 {
   font-weight: 600;
   margin: 25px 0 8px;
+}
+.services-page .our-qualities p {
+  max-width: 315px;
 }
 .services-page .contact-us {
   margin-top: 6.25rem;
@@ -1200,20 +1213,24 @@ a {
   width: max-content;
 }
 .career .career-positions {
-  margin: 3.75rem 0;
-}
-.career .career-positions ul {
   display: flex;
   justify-content: space-between;
   padding: 0;
   list-style-type: none;
+  border: none;
+  margin: 3.75rem 0;
 }
-.career .career-positions ul a {
+.career .career-positions button {
   font-size: 30px !important;
   font-weight: 700 !important;
   position: relative;
+  padding: 0;
+  color: #FFFFFF;
 }
-.career .career-positions ul a:after {
+.career .career-positions button .nav-link.active {
+  background-color: transparent;
+}
+.career .career-positions button:after {
   content: "";
   position: absolute;
   display: none;
@@ -1221,18 +1238,19 @@ a {
   border: 1px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.career .career-positions ul a:hover {
+.career .career-positions button.active {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  background-color: transparent;
 }
-.career .career-positions ul a:hover::after {
+.career .career-positions button.active::after {
   display: block;
 }
-.career .career-positions ul li:not(:last-child) {
+.career .career-positions li:not(:last-child) {
   margin-right: 24px;
 }
 .career .job-listing ul {
@@ -1435,41 +1453,56 @@ a {
   margin-bottom: 40px;
 }
 .web-development .perks {
-  margin-bottom: 130px;
+  margin-bottom: 8.125rem;
 }
 .web-development .perks h1 {
   max-width: 700px;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 .web-development .perks .perks-detail {
   display: flex;
   max-width: 795px;
 }
+.web-development .perks .perks-detail:nth-child(even) {
+  margin-left: auto;
+}
 .web-development .perks .perks-detail:not(:last-child) {
-  margin-bottom: 70px;
+  margin-bottom: 4.375rem;
 }
 .web-development .perks .perks-detail .perk-list-count {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .web-development .perks .perks-detail .perk-list-count span {
   font-size: 80px;
   font-weight: 800;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 1.875rem;
+  line-height: 86%;
 }
 .web-development .perks .perks-detail .perk-list-head {
   position: relative;
-  padding-left: 3.625rem;
+  padding-left: 3.75rem;
 }
 .web-development .perks .perks-detail .perk-list-head::before {
   content: "";
   position: absolute;
   display: block;
   width: 5px;
-  height: 130px;
-  border: 2px solid #FFFFFF;
-  background: #FFFFFF;
+  height: 170px;
+  border: 3px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
   top: 0;
   left: 30px;
+}
+.web-development .perks .perks-detail .perk-list-head h3 {
+  margin-bottom: 2.5rem;
 }
 .web-development .perks .perks-detail .perk-list-head p {
   max-width: 640px;

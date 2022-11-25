@@ -35,6 +35,7 @@
       @include button;
       margin: 1.875rem 0rem 8.125rem;
       padding: .9375rem 4.375rem;
+      
     }
   }
   .svg-wrapper {
@@ -50,36 +51,41 @@
       }
     }
     .career-positions {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      list-style-type: none;
+      border: none;
       margin: 3.75rem 0;
-      ul {
-        display: flex;
-        justify-content: space-between;
+      button {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        position: relative;
         padding: 0;
-        list-style-type: none;
-        a {
-          font-size: 30px !important;
-          font-weight: 700 !important;
-          position: relative;
-          &:after {
-            content: '';
-            position: absolute;
-            display:none;
-            width: 100%;
-            border:1px solid transparent;
-            background:
-            linear-gradient($bg-dark,$bg-dark) padding-box,
-            linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
-          }
-          &:hover{
-            @include gradient;
-              &::after {
-                display: block;
-              }
+        color: $primary;
+        .nav-link.active{
+          background-color: transparent;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          display:none;
+          width: 100%;
+          border:1px solid transparent;
+          background:
+          linear-gradient($bg-dark,$bg-dark) padding-box,
+          linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+        }
+        &.active{
+          @include gradient;
+          background-color: transparent;
+          &::after {
+            display: block;
           }
         }
-        li:not(:last-child) {
-        margin-right: 24px;
-        }
+      }
+      li:not(:last-child) {
+      margin-right: 24px;
       }
     }
     .job-listing {

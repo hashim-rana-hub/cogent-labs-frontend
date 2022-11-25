@@ -61,38 +61,50 @@
     }
   }
   .perks {
-    margin-bottom: 130px;
+    margin-bottom: 8.125rem;
     h1 {
       max-width: 700px;
-      margin-bottom: 60px;
+      margin-bottom: 3.75rem;
     }
     .perks-detail {
       display: flex;
       max-width: 795px;
+      &:nth-child(even) {
+        margin-left: auto;
+      }
       &:not(:last-child){
-        margin-bottom: 70px;
+        margin-bottom: 4.375rem;
       }
       .perk-list-count {
         display: flex;
         flex-direction: column;
+        align-items: center;
         span {
           font-size: 80px;
           font-weight: 800;
+          @include gradient;
+          margin-bottom: 1.875rem;
+          line-height: 86%;
         }
       }
       .perk-list-head {
         position: relative;
-        padding-left: 3.625rem;
+        padding-left: 3.75rem;
         &::before {
           content:'';
           position: absolute;
           display: block;
           width: 5px;
-          height: 130px;
-          border: 2px solid $primary;
-          background:$primary;
+          height: 170px;
+          border:3px solid transparent;
+          background:
+          linear-gradient($bg-dark,$bg-dark) padding-box,
+          linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;          
           top: 0;
           left: 30px;
+        }
+        h3 {
+          margin-bottom: 2.5rem;
         }
         p {
           max-width: 640px;
