@@ -9,6 +9,12 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px !important;
+  }
+}
+
 .page-title {
   font-size: 70px;
   font-weight: 800;
@@ -16,12 +22,6 @@ body {
   margin-bottom: 1.875rem;
 }
 .page-title span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   display: block;
 }
 
@@ -40,12 +40,6 @@ body {
 }
 
 .block-heading h5 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   margin: 0 auto;
 }
 .block-heading h3 {
@@ -74,15 +68,12 @@ body {
   display: none;
   width: 100%;
   border: 1px solid transparent;
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
 .navbar ul li a:hover {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .navbar ul li a:hover::after {
   display: block;
@@ -91,9 +82,6 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .navbar ul li a.active::after {
   display: block;
@@ -140,7 +128,7 @@ body {
   margin-right: 1.25rem;
 }
 .services .card-listing .card h6 {
-  margin-top: 1.875rem;
+  margin: 1.875rem 0 0;
 }
 .services .card-listing .card p {
   margin-top: 1rem;
@@ -190,9 +178,6 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .about-us .experience span {
   font-size: 20px;
@@ -270,22 +255,25 @@ body {
   flex: 0 0 170px;
   margin-right: 4.6875rem;
 }
-.contact-us .contact-info .information a {
+.contact-us .contact-info .information ul {
+  padding: 0;
+}
+.contact-us .contact-info .information ul li {
+  list-style-type: none;
+}
+.contact-us .contact-info .information ul li:not(:last-of-type) {
+  padding-bottom: 1.25rem;
+}
+.contact-us .contact-info .information ul li a {
   font-size: 24px;
   font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
-}
-.contact-us .contact-info .information a span {
   font-size: 18px;
   font-weight: 400;
+}
+.contact-us .contact-info .information ul li a span {
   font-family: "Poppins", "sans-serif";
-}
-.contact-us .contact-info .information a span:not(:last-of-type) {
-  padding-bottom: 1.25rem;
-}
-.contact-us .contact-info .information a:hover {
-  color: #FFFFFF;
 }
 .contact-us .contact-info .contact-detail {
   flex: 1;
@@ -357,9 +345,6 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .blog-grid .card .card-footer {
   padding: 0px;
@@ -372,9 +357,6 @@ body {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .blog-grid .card .card-footer p {
   font-size: 16px;
@@ -437,6 +419,7 @@ body {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
+  margin: 0;
 }
 .footer ul li:not(:last-child) {
   margin-right: 24px;
@@ -518,57 +501,55 @@ p {
   padding: 12px 20px;
   margin: 2.1875rem auto 6.5rem;
 }
-
-.portfolio {
+.home .portfolio {
   margin-top: 8.125rem;
 }
-.portfolio .portfolio-header {
+.home .portfolio .portfolio-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.portfolio .portfolio-header h3 {
+.home .portfolio .portfolio-header h3 {
   margin: 0 auto 3rem !important;
 }
-.portfolio .images-grid .item-2 img {
+.home .portfolio .images-grid .item-2 img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.testimonial {
+.home .testimonial {
   margin-top: 7.6875rem;
   text-align: center;
   margin-right: 75px;
 }
-.testimonial h3 {
+.home .testimonial h3 {
   max-width: 525px;
 }
-.testimonial .slider {
+.home .testimonial .slider {
   text-align: center;
 }
-.testimonial .slider .slider-flex {
+.home .testimonial .slider .slider-flex {
   display: flex;
   -moz-column-gap: 3.75rem;
        column-gap: 3.75rem;
 }
-.testimonial .slider .slider-flex .slider-col {
+.home .testimonial .slider .slider-flex .slider-col {
   display: flex;
   margin-left: 1.875rem;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button {
   background: none;
   padding: 0;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button.active {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button.active {
   background-color: transparent;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button.active .slider-image .person {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button.active .slider-image .person {
   background: #2D2D2D;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image {
   width: 420px;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person {
   display: flex;
   padding: 20px;
   background: rgba(34, 34, 34, 0.6784313725);
@@ -576,38 +557,38 @@ p {
   height: 107px;
   border-radius: 6px;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .icon {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .icon {
   margin-right: 20px;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail {
   text-align: start;
   color: #FFFFFF;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail span {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail span {
   font-size: 18px;
   font-weight: 700;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail p {
+.home .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail p {
   font-size: 14px;
   font-weight: 400;
 }
-.testimonial .slider .slider-flex .reviews {
+.home .testimonial .slider .slider-flex .reviews {
   text-align: start;
 }
-.testimonial .slider .slider-flex .reviews h6 {
+.home .testimonial .slider .slider-flex .reviews h6 {
   margin-bottom: 5px;
 }
-.testimonial .slider .slider-flex .reviews ul {
+.home .testimonial .slider .slider-flex .reviews ul {
   display: flex;
   padding-left: 0;
 }
-.testimonial .slider .slider-flex .reviews li {
+.home .testimonial .slider .slider-flex .reviews li {
   list-style-type: none;
 }
-.testimonial .slider .slider-flex .reviews li:not(:last-child) {
+.home .testimonial .slider .slider-flex .reviews li:not(:last-child) {
   margin-right: 5px;
 }
-.testimonial .slider .slider-flex .reviews .review-detail p {
+.home .testimonial .slider .slider-flex .reviews .review-detail p {
   max-width: 530px;
   margin-bottom: 1rem;
 }
@@ -621,15 +602,8 @@ p {
   align-items: center;
 }
 .about .connection .row h1 {
+  max-width: 620px;
   display: block;
-}
-.about .connection .row h1 span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .about .connection .image-wrapper {
   display: flex;
@@ -703,14 +677,6 @@ p {
   margin-top: 8.125rem;
   text-align: center;
 }
-.about .our-work h5 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
 .about .our-work .snapshot-projects {
   margin-top: 6.25rem;
 }
@@ -725,14 +691,6 @@ p {
 .about .benifits .company-benefits {
   text-align: center;
   margin: 8.125rem 0rem 6.25rem;
-}
-.about .benifits .company-benefits h5 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .about .benifits .benifit-details {
   margin-top: 6.25rem;
@@ -777,12 +735,6 @@ p {
   font-weight: 800;
 }
 .services-page .product-scale h1 span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   display: block;
 }
 .services-page .product-scale p {
@@ -816,14 +768,6 @@ p {
 .services-page .lasting-impact {
   margin: 8.125rem 0 3.75rem;
 }
-.services-page .lasting-impact h2 span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
 .services-page .lasting-impact .impact-details {
   display: flex;
   justify-content: center;
@@ -836,12 +780,6 @@ p {
   text-align: left;
 }
 .services-page .our-qualities span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   font-size: 80px;
   font-weight: 800;
 }
@@ -859,14 +797,6 @@ p {
 .blog-page .blog {
   text-align: center;
   margin-top: 6.6875rem;
-}
-.blog-page .blog h1 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .blog-page .blog p {
   max-width: 860px;
@@ -903,12 +833,6 @@ p {
 .blog-page .recent-blog .card-grid .card .card-body span {
   font-size: 30px;
   font-weight: 700;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .blog-page .recent-blog .card-grid .image-wrapper {
   width: 100%;
@@ -979,14 +903,6 @@ p {
 .blog-detail .development .development-header {
   text-align: center;
   margin-bottom: 60px;
-}
-.blog-detail .development .development-header h1 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .blog-detail .development .development-header span {
   margin-top: 8px;
@@ -1123,12 +1039,6 @@ p {
 }
 .consultation-page .consultation-header h1 {
   text-align: center;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .consultation-page .consultation-body {
   display: flex;
@@ -1222,12 +1132,6 @@ p {
   margin-top: 6.6875rem;
 }
 .find-job h1 span {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   display: block;
 }
 .find-job p {
@@ -1275,14 +1179,6 @@ p {
 .career .career-header {
   text-align: center;
 }
-.career .career-header h5 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
 .career .career-positions {
   display: flex;
   justify-content: space-between;
@@ -1307,15 +1203,12 @@ p {
   display: none;
   width: 100%;
   border: 1px solid transparent;
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
 .career .career-positions button.active {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   background-color: transparent;
 }
 .career .career-positions button.active::after {
@@ -1345,7 +1238,7 @@ p {
   display: flex;
   align-items: center;
   border: 1px solid transparent;
-  padding: 10px 50px;
+  padding: 12px 40px;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
 .career .job-listing ul li a:hover {
@@ -1362,14 +1255,6 @@ p {
 .job-form .job-form-header {
   margin: 8.125rem 0 3.75rem;
   text-align: center;
-}
-.job-form .job-form-header h5 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .job-form form {
   padding: 0 3.75rem;
@@ -1555,12 +1440,6 @@ p {
 .web-development .perks .perks-detail .perk-list-count span {
   font-size: 80px;
   font-weight: 800;
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   margin-bottom: 1.875rem;
   line-height: 86%;
 }
@@ -1575,7 +1454,7 @@ p {
   width: 5px;
   height: 170px;
   border: 3px solid transparent;
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
   top: 0;
   left: 30px;
 }
@@ -1593,14 +1472,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.portfolio .portfolio-header h5 {
-  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .portfolio .portfolio-header h3 {
   margin: 2.5rem 0rem 2.5rem;

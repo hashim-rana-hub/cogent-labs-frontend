@@ -6,7 +6,6 @@
     margin-top: 6.6875rem;
     h1 {
       span {
-        @include gradient;
         display: block;
       }
     }
@@ -46,9 +45,6 @@
     margin-top: 8.125rem;
     .career-header {
       text-align: center;
-      h5 {
-        @include gradient;
-      }
     }
     .career-positions {
       display: flex;
@@ -73,7 +69,6 @@
           width: 100%;
           border:1px solid transparent;
           background:
-          linear-gradient($bg-dark,$bg-dark) padding-box,
           linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
         }
         &.active{
@@ -110,7 +105,7 @@
             display: flex;
             align-items: center;
             border:1px solid transparent;
-            padding: 10px 50px;
+            padding: 12px 40px;
             background:
             linear-gradient($bg-dark,$bg-dark) padding-box,
             linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
@@ -130,9 +125,6 @@
     .job-form-header {
       margin: 8.125rem 0 3.75rem;
       text-align: center;
-      h5 {
-        @include gradient;
-      }
     }
     form {
       padding: 0 3.75rem;

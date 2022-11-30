@@ -7,7 +7,6 @@
       font-size: 4.375rem;
       font-weight: 800;
       span {
-        @include gradient;
         display: block;
       }
     }
@@ -42,11 +41,6 @@
   }
   .lasting-impact {
     margin: 8.125rem 0 3.75rem;
-    h2 {
-      span {
-        @include gradient;
-      }
-    }
     .impact-details {
       display: flex;
       justify-content: center;
@@ -59,7 +53,6 @@
   .our-qualities {
     text-align: left;
     span {
-      @include gradient;
       font-size: 80px;
       font-weight: 800;
     }

@@ -6,10 +6,8 @@
       display: flex;
       align-items: center;
       h1 {
+        max-width: 620px;
         display: block;
-        span {
-          @include gradient;
-        }
       }
     }
     .image-wrapper {
@@ -83,9 +81,6 @@
   .our-work {
     margin-top: 8.125rem;
     text-align: center;
-      h5 {
-        @include gradient;     
-      }
     .snapshot-projects {
       margin-top: 6.25rem;
       .snapshot-projects-list {
@@ -102,9 +97,6 @@
     .company-benefits {
       text-align: center;
       margin: 8.125rem 0rem 6.25rem;
-      h5 {
-        @include gradient;
-      }
     }
     .benifit-details {
       margin-top: 6.25rem;

@@ -2,9 +2,6 @@
   .blog {
     text-align: center;
     margin-top: 6.6875rem;
-    h1 {
-      @include gradient;
-    }
     p {
       max-width: 860px;
       margin: 10px auto  0;
@@ -33,7 +30,6 @@
           span {
             font-size: 30px;
             font-weight: 700;
-            @include gradient;
           }
         }
       }

@@ -1,18 +1,24 @@
 *{
   font-family:SF pro Display;
 }
+
 body {
   background-color: $bg-dark;
   color: $primary;
   overflow-x: hidden;
 }
+.container {
+  @media screen and (min-width:1440px) {
+    max-width: 1440px !important;
+  }
+}
+
 .page-title{
   font-size: 70px;
   font-weight: 800;
   line-height: 1.4;
   margin-bottom: 1.875rem;
   span {
-    @include gradient;
     display: block;
   }
 }
@@ -31,7 +37,6 @@ body {
 
 .block-heading {
   h5 {
-    @include gradient;
     margin: 0 auto;
   }
   h3 {
@@ -60,7 +65,6 @@ body {
           width: 100%;
           border:1px solid transparent;
           background:
-          linear-gradient($bg-dark,$bg-dark) padding-box,
           linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
         }
         &:hover {
@@ -74,7 +78,6 @@ body {
             &::after {
               display: block;
             }
-
           }
         }
      }
@@ -122,7 +125,7 @@ body {
         margin-right: 1.25rem;
       }
       h6 {
-        margin-top: 1.875rem;
+        margin: 1.875rem 0 0;
       }
       p {
         margin-top: 1rem;
@@ -244,18 +247,21 @@ body {
     .information {
       flex: 0 0 170px;
       margin-right: 4.6875rem;
-      a {
-        @include a-tag;
-        span {
-          font-size: 18px;
-          font-weight: 400;
-          font-family: $secondary-font;
+      ul {
+        padding: 0;
+        li {
+          list-style-type: none;
           &:not(:last-of-type){
             padding-bottom: 1.25rem;
           }
-        }
-        &:hover{
-          color: $primary;
+          a {
+            @include a-tag;
+            font-size: 18px;
+            font-weight: 400;
+            span {
+              font-family: $secondary-font;
+            }
+          }
         }
       }
     }
@@ -384,6 +390,7 @@ body {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    margin: 0;
     li:not(:last-child) {
       margin-right: 24px;
     } 

@@ -48,7 +48,7 @@
     <div class="blog-page">
       <div class="container">
         <div class="blog">
-          <h1 class="text-center">
+          <h1 class="text-center subtitle">
             Welcome To Our Blog
           </h1>
           <p>
@@ -65,7 +65,7 @@
                 <img src="../assets/images/Blog-1.png" alt="Card image">
               </div>
               <div class="card-body">
-                <span>Design</span>
+                <span class="subtitle">Design</span>
                 <h5>
                   Lorem ipsum dolor sit amet, consectetor elepesit, donorphsk to.
                 </h5>
@@ -76,7 +76,7 @@
                 <img src="../assets/images/Blog-2.png" alt="Card image">
               </div>
               <div class="card-body">
-                <span>Development</span>
+                <span class="subtitle">Development</span>
                 <h5>
                   Lorem ipsum dolor sit amet, consectetor elepesit.
                 </h5>
@@ -87,7 +87,7 @@
                 <img src="../assets/images/Blog-3.png" alt="Card image">
               </div>
               <div class="card-body">
-                <span>Quality Assurance</span>
+                <span class="subtitle">Quality Assurance</span>
                 <h5>
                   Lorem ipsum dolor sit amet, consectetor elepesit.
                 </h5>
@@ -219,21 +219,33 @@
             <div class="col-7 contact-info">
                 <div class="information">
                   <h6>Informations</h6>
-                  <a href="#"><p>Terms & Condition</p></a>
-                  <a href="#"><p>Privacy Policy</p></a>
-                  <a href="#"><p>Faq’s</p></a>
+                  <ul>
+                    <li>
+                      <a href="#"><span>Terms & Condition</span></a>
+                    </li>                  
+                    <li>
+                      <a href="#"><span>Privacy Policy</span></a>
+                    </li>                  
+                    <li>
+                      <a href="#"><span>Faq’s</span></a>
+                    </li>                  
+                  </ul>
                 </div>
                 <div class="contact-detail">
                   <h6>Contacts us</h6>
                   <ul>
                     <div class="contact-list">
                       <li>
-                        <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
-                          <path d="M20.2171 3.95312V13.5973C20.2171 14.2368 19.9631 14.85 19.5109 15.3022C19.0588 15.7543 18.4455 16.0084 17.8061 16.0084H3.33976C2.70031 16.0084 2.08705 15.7543 1.63489 15.3022C1.18273 14.85 0.928711 14.2368 0.928711 13.5973V3.95312" stroke="white" stroke-width="1.62022" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M20.2171 3.95304C20.2171 3.31359 19.9631 2.70033 19.5109 2.24817C19.0588 1.79601 18.4455 1.54199 17.8061 1.54199H3.33976C2.70031 1.54199 2.08705 1.79601 1.63489 2.24817C1.18273 2.70033 0.928711 3.31359 0.928711 3.95304L9.29505 9.17698C9.67824 9.41648 10.121 9.54346 10.5729 9.54346C11.0248 9.54346 11.4676 9.41648 11.8508 9.17698L20.2171 3.95304Z" stroke="white" stroke-width="1.62022" stroke-linecap="round" stroke-linejoin="round"/>
+                        <a href="">
+                          <svg width="22" height="17" viewBox="0 0 22 17" fill="none">
+                            <path d="M20.2171 3.95312V13.5973C20.2171 14.2368 19.9631 14.85 19.5109 15.3022C19.0588 15.7543 18.4455 16.0084 17.8061 16.0084H3.33976C2.70031 16.0084 2.08705 15.7543 1.63489 15.3022C1.18273 14.85 0.928711 14.2368 0.928711 13.5973V3.95312" stroke="white" stroke-width="1.62022" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.2171 3.95304C20.2171 3.31359 19.9631 2.70033 19.5109 2.24817C19.0588 1.79601 18.4455 1.54199 17.8061 1.54199H3.33976C2.70031 1.54199 2.08705 1.79601 1.63489 2.24817C1.18273 2.70033 0.928711 3.31359 0.928711 3.95304L9.29505 9.17698C9.67824 9.41648 10.121 9.54346 10.5729 9.54346C11.0248 9.54346 11.4676 9.41648 11.8508 9.17698L20.2171 3.95304Z" stroke="white" stroke-width="1.62022" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>                      
+                        </a>
                       </li>
-                      <li>hello@cogentlabs.co</li>
+                      <li>
+                        <span>hello@cogentlabs.co</span>
+                      </li>
                     </div>
                     <div class="contact-list">
                       <li>
@@ -241,7 +253,9 @@
                           <path d="M13.1788 19.5465L13.1893 19.5539C14.1002 20.1339 15.1816 20.3857 16.255 20.2678C17.3283 20.15 18.3294 19.6694 19.0926 18.9056L19.7557 18.2425C19.9027 18.0957 20.0192 17.9213 20.0987 17.7294C20.1783 17.5375 20.2192 17.3318 20.2192 17.1241C20.2192 16.9163 20.1783 16.7106 20.0987 16.5187C20.0192 16.3268 19.9027 16.1524 19.7557 16.0056L16.959 13.211C16.8122 13.0641 16.6378 12.9475 16.4459 12.868C16.254 12.7884 16.0483 12.7475 15.8406 12.7475C15.6328 12.7475 15.4271 12.7884 15.2352 12.868C15.0433 12.9475 14.8689 13.0641 14.7221 13.211C14.4256 13.5074 14.0234 13.674 13.6041 13.674C13.1849 13.674 12.7827 13.5074 12.4862 13.211L8.01443 8.73819C7.718 8.44166 7.55147 8.03954 7.55147 7.62025C7.55147 7.20096 7.718 6.79883 8.01443 6.50231C8.16137 6.35546 8.27794 6.1811 8.35747 5.98919C8.43699 5.79728 8.47793 5.59158 8.47793 5.38384C8.47793 5.1761 8.43699 4.9704 8.35747 4.77849C8.27794 4.58658 8.16137 4.41222 8.01443 4.26537L5.21879 1.47078C4.92226 1.17434 4.52014 1.00781 4.10085 1.00781C3.68156 1.00781 3.27943 1.17434 2.98291 1.47078L2.31878 2.13385C1.55514 2.89725 1.07479 3.89834 0.957099 4.9717C0.839414 6.04505 1.09144 7.12644 1.67153 8.03717L1.67785 8.04771C4.74144 12.5804 8.64554 16.4838 13.1788 19.5465V19.5465Z" stroke="white" stroke-width="1.62022" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>                      
                       </li>
-                      <li>+92 300 1114369</li>
+                      <li>
+                        <span>+92 300 1114369</span> 
+                      </li>
                     </div>
                     <div class="contact-list">
                       <li>
@@ -250,7 +264,9 @@
                           <path d="M7.60315 16.4651C7.60315 17.518 8.02141 18.5278 8.76593 19.2723C9.51045 20.0168 10.5202 20.4351 11.5731 20.4351C12.626 20.4351 13.6358 20.0168 14.3803 19.2723C15.1249 18.5278 15.5431 17.518 15.5431 16.4651C15.5431 15.4122 15.1249 14.4024 14.3803 13.6579C13.6358 12.9134 12.626 12.4951 11.5731 12.4951C10.5202 12.4951 9.51045 12.9134 8.76593 13.6579C8.02141 14.4024 7.60315 15.4122 7.60315 16.4651V16.4651Z" stroke="white" stroke-width="1.62022" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>                      
                       </li>
-                      <li>2nd Floor, 21-K Commercial, Model Town, Lahore.</li>
+                      <li>
+                        <span>2nd Floor, 21-K Commercial, Model Town, Lahore.</span> 
+                      </li>
                   </div>
                   </ul>
                 </div>

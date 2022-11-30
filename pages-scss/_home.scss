@@ -1,122 +1,121 @@
 .home{
   .consultation {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 6.6875rem;
-    }
-    h6 {
-      font-weight: 400;
-      max-width: 900px;
-      line-height: 2.5625rem;
-      margin: 0px auto auto;
-    }
-    .btn {
-      @include button;
-      font-size: 1.125rem;
-      padding: 12px 20px;
-      margin: 2.1875rem auto 6.5rem;
-    }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 6.6875rem;
   }
-
-.portfolio {
-  margin-top: 8.125rem;
-  .portfolio-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h3 {
-      margin: 0 auto 3rem !important;
-    }
+  h6 {
+    font-weight: 400;
+    max-width: 900px;
+    line-height: 2.5625rem;
+    margin: 0px auto auto;
   }
-  .images-grid {
-    .item-2 {
-      img {
-        object-fit: cover;
+  .btn {
+    @include button;
+    font-size: 1.125rem;
+    padding: 12px 20px;
+    margin: 2.1875rem auto 6.5rem;
+  }
+  .portfolio {
+    margin-top: 8.125rem;
+    .portfolio-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        margin: 0 auto 3rem !important;
+      }
+    }
+    .images-grid {
+      .item-2 {
+        img {
+          object-fit: cover;
+        }
       }
     }
   }
-}
-.testimonial {
-  margin-top: 7.6875rem;
-  text-align: center;
-  margin-right: 75px;
-  h3 {
-    max-width: 525px;
-  }
-  .slider {
+  .testimonial {
+    margin-top: 7.6875rem;
     text-align: center;
-    .slider-flex {
-      display: flex;
-      column-gap: 3.75rem;
-      .slider-col {
+    margin-right: 75px;
+    h3 {
+      max-width: 525px;
+    }
+    .slider {
+      text-align: center;
+      .slider-flex {
         display: flex;
-        margin-left: 1.875rem;
-        .review-persons-list {
-          .nav-item {
-            button {
-              background: none;
-              padding: 0;
-              &.active {
-                background-color: transparent;
-                .slider-image{
+        column-gap: 3.75rem;
+        .slider-col {
+          display: flex;
+          margin-left: 1.875rem;
+          .review-persons-list {
+            .nav-item {
+              button {
+                background: none;
+                padding: 0;
+                &.active {
+                  background-color: transparent;
+                  .slider-image{
+                    .person {
+                      background:#2D2D2D ;
+                    }
+                  }
+                }
+                .slider-image {
+                  width: 420px;
                   .person {
-                    background:#2D2D2D ;
-                  }
-                }
-              }
-              .slider-image {
-                width: 420px;
-                .person {
-                  display: flex;
-                  padding: 20px;
-                  background:#222222AD ;
-                  margin-bottom: 1.875rem;
-                  height: 107px;
-                  border-radius: 6px;
-                  .icon {
-                    margin-right: 20px;
-                  }
-                  .person-detail {
-                    text-align: start;
-                    color: $primary;
-                    span {
-                      font-size: 18px;
-                      font-weight: 700;
+                    display: flex;
+                    padding: 20px;
+                    background:#222222AD ;
+                    margin-bottom: 1.875rem;
+                    height: 107px;
+                    border-radius: 6px;
+                    .icon {
+                      margin-right: 20px;
                     }
-                    p {
-                      font-size: 14px;
-                      font-weight: 400;
+                    .person-detail {
+                      text-align: start;
+                      color: $primary;
+                      span {
+                        font-size: 18px;
+                        font-weight: 700;
+                      }
+                      p {
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
                     }
                   }
                 }
-              }
-            }  
+              }  
+            }
           }
         }
-      }
-     .reviews {
-      text-align: start;
-      h6 {
-        margin-bottom: 5px;
-      }
-      ul {
-        display: flex;
-        padding-left: 0;
-      }
-      li {
-        list-style-type:  none;
-        &:not(:last-child){
-          margin-right: 5px;
+       .reviews {
+        text-align: start;
+        h6 {
+          margin-bottom: 5px;
         }
-      }
-      .review-detail {
-        p {
-          max-width: 530px;
-          margin-bottom: 1rem;
+        ul {
+          display: flex;
+          padding-left: 0;
         }
+        li {
+          list-style-type:  none;
+          &:not(:last-child){
+            margin-right: 5px;
+          }
+        }
+        .review-detail {
+          p {
+            max-width: 530px;
+            margin-bottom: 1rem;
+          }
+        }
+       }
       }
-     }
     }
   }
 }
