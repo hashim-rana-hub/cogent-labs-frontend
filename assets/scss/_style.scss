@@ -35,38 +35,51 @@ body {
     margin: 0 auto;
   }
   h3 {
-    margin: 15px auto 60px !important;
+    margin: 0 auto 60px;
   }
 }
 
 .navbar {
   display: flex;
-  padding: 30px 65px;
+  padding: 1.5625rem 4.0625rem;
   width: 100%;
   ul {
     display: flex;
     list-style-type: none;
-    a {
-      position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        display:none;
-        width: 100%;
-        border:1px solid transparent;
-        background:
-        linear-gradient($bg-dark,$bg-dark) padding-box,
-        linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
-      }
-      &:hover {
-        @include gradient;
-          &::after {
-            display: block;
+    li {
+      a {
+        position: relative;
+        font-size: 24px;
+        font-weight: 500;
+        color: $primary;
+        text-decoration: none;
+        &:after {
+          content: '';
+          position: absolute;
+          display:none;
+          width: 100%;
+          border:1px solid transparent;
+          background:
+          linear-gradient($bg-dark,$bg-dark) padding-box,
+          linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+        }
+        &:hover {
+          @include gradient;
+            &::after {
+              display: block;
+            }
+          }
+          &.active{
+            @include gradient;
+            &::after {
+              display: block;
+            }
+
           }
         }
-      }
+     }
       li:not(:last-child) {
-      margin-right: 24px;
+      margin-right: 4rem;
       }
     }
   .btn {
@@ -77,6 +90,7 @@ body {
 
 .services {
   margin-top:7.375rem;
+  padding: 0;
   h3 {
     span{
       display: block;
@@ -112,7 +126,8 @@ body {
       }
       p {
         margin-top: 1rem;
-        margin-bottom: 2.5rem;
+        line-height: 30.8px !important;
+        margin-bottom: 2.625rem;
         @include truncate(4);
       } 
       a {
@@ -120,20 +135,23 @@ body {
       }
     }
   }
-  a {
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
-    color: $primary;
-    margin-top: 2.5rem;
-    &:hover {
-      svg {
-        transform: translateX(15px);
-        transition: 0.2s ease-in;
+  .see-more {
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: baseline;
+      color: $primary;
+      @include a-tag;
+      margin-top: 2.5rem;
+      &:hover {
+        svg {
+          transform: translateX(15px);
+          transition: 0.2s ease-in;
+        }
       }
-    }
-    svg {
-      margin-left: 5px;
+      svg {
+        margin-left: 5px;
+      }
     }
   }
 }
@@ -210,23 +228,36 @@ body {
 }
 
 .contact-us {
-  margin: 10rem auto 5.3125rem ;
+  margin: 6.25rem auto 3.4375rem ;
   padding: 0rem 5rem;
   .description {
     margin-top: 2.5rem;
     max-width: 360px;
+    font-family: $secondary-font;
   }
   .contact-info {
     display: flex;
+    h6 {
+      font-family: $primary-font;
+      margin-bottom: 2.1875rem;
+    }
     .information {
-      display: grid;
       flex: 0 0 170px;
-      margin-right: 75px;
-     a {
-       &:hover{
-        color: $primary;
+      margin-right: 4.6875rem;
+      a {
+        @include a-tag;
+        span {
+          font-size: 18px;
+          font-weight: 400;
+          font-family: $secondary-font;
+          &:not(:last-of-type){
+            padding-bottom: 1.25rem;
+          }
+        }
+        &:hover{
+          color: $primary;
+        }
       }
-     }
     }
     .contact-detail {
       flex: 1;
@@ -235,10 +266,18 @@ body {
         .contact-list {
           list-style-type: none;
           display: flex;
-          padding-top: 1.5rem;
+          align-items: baseline;
+          &:not(:last-child){
+            padding-bottom:1.25rem ;
+          }
           svg {
             margin-right: 10px;
             cursor: pointer;
+          }
+          span {
+            font-family: $secondary-font;
+            font-size: 1.125rem;
+            font-weight: 400;
           }
         }
       }
@@ -338,6 +377,9 @@ body {
 .footer {
   border-top: 1px solid #383838;
   padding: 2.5rem 4.375rem;
+  p {
+    font-family: $primary-font;
+  }
   ul {
     display: flex;
     justify-content: flex-end;

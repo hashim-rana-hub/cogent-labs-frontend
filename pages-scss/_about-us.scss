@@ -34,7 +34,6 @@
   }
   .ceo {
     border-bottom: 2px solid #FFFFFF40;
-    margin-top: 8rem;
     h1 {
       font-weight: 600;
       margin-top: -20px;
@@ -43,7 +42,7 @@
       font-weight: 600;
     }
     .we-are-strong {
-      margin-bottom: 4rem;
+      margin-top: 8rem;
       p {
         margin-top: 60px;
       }
@@ -55,11 +54,11 @@
       .ceo-detail {
         display: flex;
         align-items: center;
-        justify-content: space-around;
         margin-bottom: 5rem;
         .ceo-img {
           width: 120px;
           height: 120px;
+          margin-right: 1.875rem;
           img {
             height: 100%;
             width: 100%;
@@ -78,7 +77,7 @@
       }
     }
   }
-  .about-us{
+  .about-us {
     margin-top: 7.1875rem;
   }
   .our-work {

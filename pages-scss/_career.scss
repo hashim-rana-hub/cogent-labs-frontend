@@ -106,7 +106,9 @@
               font-weight: 500;
             }
           }
-          button {
+          a {
+            display: flex;
+            align-items: center;
             border:1px solid transparent;
             padding: 10px 50px;
             background:

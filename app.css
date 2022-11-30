@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap");
 * {
   font-family: SF pro Display;
 }
@@ -48,22 +49,26 @@ body {
   margin: 0 auto;
 }
 .block-heading h3 {
-  margin: 15px auto 60px !important;
+  margin: 0 auto 60px;
 }
 
 .navbar {
   display: flex;
-  padding: 30px 65px;
+  padding: 1.5625rem 4.0625rem;
   width: 100%;
 }
 .navbar ul {
   display: flex;
   list-style-type: none;
 }
-.navbar ul a {
+.navbar ul li a {
   position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
 }
-.navbar ul a:after {
+.navbar ul li a:after {
   content: "";
   position: absolute;
   display: none;
@@ -71,7 +76,7 @@ body {
   border: 1px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.navbar ul a:hover {
+.navbar ul li a:hover {
   background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,11 +84,22 @@ body {
   width: -moz-max-content;
   width: max-content;
 }
-.navbar ul a:hover::after {
+.navbar ul li a:hover::after {
+  display: block;
+}
+.navbar ul li a.active {
+  background: linear-gradient(to right, #20D4FE 0%, #B722FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.navbar ul li a.active::after {
   display: block;
 }
 .navbar ul li:not(:last-child) {
-  margin-right: 24px;
+  margin-right: 4rem;
 }
 .navbar .btn {
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
@@ -93,6 +109,7 @@ body {
 
 .services {
   margin-top: 7.375rem;
+  padding: 0;
 }
 .services h3 span {
   display: block;
@@ -127,7 +144,8 @@ body {
 }
 .services .card-listing .card p {
   margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  line-height: 30.8px !important;
+  margin-bottom: 2.625rem;
   line-height: 1.2;
   max-height: 4.8em;
   text-overflow: ellipsis;
@@ -140,18 +158,22 @@ body {
 .services .card-listing .card a {
   justify-content: flex-start;
 }
-.services a {
+.services .see-more a {
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
   color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
   margin-top: 2.5rem;
 }
-.services a:hover svg {
+.services .see-more a:hover svg {
   transform: translateX(15px);
   transition: 0.2s ease-in;
 }
-.services a svg {
+.services .see-more a svg {
   margin-left: 5px;
 }
 
@@ -229,20 +251,38 @@ body {
 }
 
 .contact-us {
-  margin: 10rem auto 5.3125rem;
+  margin: 6.25rem auto 3.4375rem;
   padding: 0rem 5rem;
 }
 .contact-us .description {
   margin-top: 2.5rem;
   max-width: 360px;
+  font-family: "Poppins", "sans-serif";
 }
 .contact-us .contact-info {
   display: flex;
 }
+.contact-us .contact-info h6 {
+  font-family: "DM Sans", "sans-serif";
+  margin-bottom: 2.1875rem;
+}
 .contact-us .contact-info .information {
-  display: grid;
   flex: 0 0 170px;
-  margin-right: 75px;
+  margin-right: 4.6875rem;
+}
+.contact-us .contact-info .information a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.contact-us .contact-info .information a span {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poppins", "sans-serif";
+}
+.contact-us .contact-info .information a span:not(:last-of-type) {
+  padding-bottom: 1.25rem;
 }
 .contact-us .contact-info .information a:hover {
   color: #FFFFFF;
@@ -256,11 +296,19 @@ body {
 .contact-us .contact-info .contact-detail ul .contact-list {
   list-style-type: none;
   display: flex;
-  padding-top: 1.5rem;
+  align-items: baseline;
+}
+.contact-us .contact-info .contact-detail ul .contact-list:not(:last-child) {
+  padding-bottom: 1.25rem;
 }
 .contact-us .contact-info .contact-detail ul .contact-list svg {
   margin-right: 10px;
   cursor: pointer;
+}
+.contact-us .contact-info .contact-detail ul .contact-list span {
+  font-family: "Poppins", "sans-serif";
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .blog-grid {
@@ -382,6 +430,9 @@ body {
   border-top: 1px solid #383838;
   padding: 2.5rem 4.375rem;
 }
+.footer p {
+  font-family: "DM Sans", "sans-serif";
+}
 .footer ul {
   display: flex;
   justify-content: flex-end;
@@ -405,7 +456,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size: 4.125rem;
+  font-size: 66px;
   font-weight: 700;
 }
 
@@ -444,13 +495,6 @@ p {
   font-weight: 500;
 }
 
-a {
-  font-size: 24px;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
 @font-face {
   font-family: SF pro Display;
   src: url(./font/FontsFree-Net-SFProDisplay-Regular.ttf);
@@ -463,7 +507,8 @@ a {
 }
 .home h6 {
   font-weight: 400;
-  max-width: 1040px;
+  max-width: 900px;
+  line-height: 2.5625rem;
   margin: 0px auto auto;
 }
 .home .btn {
@@ -482,56 +527,75 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.portfolio .portfolio-header h3 {
+  margin: 0 auto 3rem !important;
+}
+.portfolio .images-grid .item-2 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .testimonial {
   margin-top: 7.6875rem;
   text-align: center;
+  margin-right: 75px;
 }
 .testimonial h3 {
   max-width: 525px;
 }
 .testimonial .slider {
   text-align: center;
-  margin-top: 3.75rem;
 }
 .testimonial .slider .slider-flex {
   display: flex;
+  -moz-column-gap: 3.75rem;
+       column-gap: 3.75rem;
 }
 .testimonial .slider .slider-flex .slider-col {
   display: flex;
+  margin-left: 1.875rem;
 }
 .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button {
   background: none;
+  padding: 0;
+}
+.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button.active {
+  background-color: transparent;
+}
+.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button.active .slider-image .person {
+  background: #2D2D2D;
 }
 .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image {
   width: 420px;
-  background: rgba(34, 34, 34, 0.6784313725);
 }
 .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person {
   display: flex;
   padding: 20px;
-  max-width: 420px;
-  background: #2D2D2D;
+  background: rgba(34, 34, 34, 0.6784313725);
   margin-bottom: 1.875rem;
   height: 107px;
   border-radius: 6px;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person.active {
-  background: #2D2D2D;
-}
 .testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .icon {
   margin-right: 20px;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .introduction {
+.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail {
   text-align: start;
-  color: white;
+  color: #FFFFFF;
 }
-.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .introduction span {
+.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail span {
   font-size: 18px;
   font-weight: 700;
 }
+.testimonial .slider .slider-flex .slider-col .review-persons-list .nav-item button .slider-image .person .person-detail p {
+  font-size: 14px;
+  font-weight: 400;
+}
 .testimonial .slider .slider-flex .reviews {
   text-align: start;
+}
+.testimonial .slider .slider-flex .reviews h6 {
+  margin-bottom: 5px;
 }
 .testimonial .slider .slider-flex .reviews ul {
   display: flex;
@@ -539,6 +603,9 @@ a {
 }
 .testimonial .slider .slider-flex .reviews li {
   list-style-type: none;
+}
+.testimonial .slider .slider-flex .reviews li:not(:last-child) {
+  margin-right: 5px;
 }
 .testimonial .slider .slider-flex .reviews .review-detail p {
   max-width: 530px;
@@ -585,7 +652,6 @@ a {
 }
 .about .ceo {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2509803922);
-  margin-top: 8rem;
 }
 .about .ceo h1 {
   font-weight: 600;
@@ -595,7 +661,7 @@ a {
   font-weight: 600;
 }
 .about .ceo .we-are-strong {
-  margin-bottom: 4rem;
+  margin-top: 8rem;
 }
 .about .ceo .we-are-strong p {
   margin-top: 60px;
@@ -608,12 +674,12 @@ a {
 .about .ceo .ceo-sec .ceo-detail {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   margin-bottom: 5rem;
 }
 .about .ceo .ceo-sec .ceo-detail .ceo-img {
   width: 120px;
   height: 120px;
+  margin-right: 1.875rem;
 }
 .about .ceo .ceo-sec .ceo-detail .ceo-img img {
   height: 100%;
@@ -1275,12 +1341,14 @@ a {
 .career .job-listing ul li .job-title p {
   font-weight: 500;
 }
-.career .job-listing ul li button {
+.career .job-listing ul li a {
+  display: flex;
+  align-items: center;
   border: 1px solid transparent;
   padding: 10px 50px;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
 }
-.career .job-listing ul li button:hover {
+.career .job-listing ul li a:hover {
   background: linear-gradient(90deg, #20D4FE 0%, #B722FF 100%);
   border: none;
 }
@@ -1400,8 +1468,13 @@ a {
 .web-development .programing-expert {
   margin: 6.6875rem 0 8.125rem;
 }
-.web-development .programing-expert .image {
-  padding: 0;
+.web-development .programing-expert .image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.web-development .programing-expert .image-wrapper img {
+  width: 100%;
+  height: 100%;
 }
 .web-development .programing-expert .description {
   padding-left: 2.5rem;

@@ -7,7 +7,8 @@
     }
     h6 {
       font-weight: 400;
-      max-width: 1040px;
+      max-width: 900px;
+      line-height: 2.5625rem;
       margin: 0px auto auto;
     }
     .btn {
@@ -24,48 +25,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    h3 {
+      margin: 0 auto 3rem !important;
+    }
+  }
+  .images-grid {
+    .item-2 {
+      img {
+        object-fit: cover;
+      }
+    }
   }
 }
 .testimonial {
   margin-top: 7.6875rem;
   text-align: center;
+  margin-right: 75px;
   h3 {
     max-width: 525px;
   }
   .slider {
     text-align: center;
-    margin-top: 3.75rem;
     .slider-flex {
       display: flex;
+      column-gap: 3.75rem;
       .slider-col {
         display: flex;
+        margin-left: 1.875rem;
         .review-persons-list {
           .nav-item {
             button {
               background: none;
+              padding: 0;
+              &.active {
+                background-color: transparent;
+                .slider-image{
+                  .person {
+                    background:#2D2D2D ;
+                  }
+                }
+              }
               .slider-image {
                 width: 420px;
-                background: #222222AD;
                 .person {
                   display: flex;
                   padding: 20px;
-                  max-width: 420px;
-                  background: #2D2D2D;
+                  background:#222222AD ;
                   margin-bottom: 1.875rem;
                   height: 107px;
                   border-radius: 6px;
-                  &.active {
-                    background: #2D2D2D;
-                  }
                   .icon {
                     margin-right: 20px;
                   }
-                  .introduction {
+                  .person-detail {
                     text-align: start;
-                    color: white;
+                    color: $primary;
                     span {
                       font-size: 18px;
                       font-weight: 700;
+                    }
+                    p {
+                      font-size: 14px;
+                      font-weight: 400;
                     }
                   }
                 }
@@ -76,12 +97,18 @@
       }
      .reviews {
       text-align: start;
+      h6 {
+        margin-bottom: 5px;
+      }
       ul {
         display: flex;
         padding-left: 0;
       }
       li {
         list-style-type:  none;
+        &:not(:last-child){
+          margin-right: 5px;
+        }
       }
       .review-detail {
         p {
