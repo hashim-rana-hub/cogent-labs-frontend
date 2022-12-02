@@ -1,0 +1,219 @@
+  .find-job {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 6.6875rem;
+    h1 {
+      span {
+        @include gradient;
+        display: block;
+      }
+    }
+    p {
+      margin: 10px 0px 35px;
+      max-width: 860px;
+    }
+    .input-group {
+      width: 760px;
+      height: 66px;
+      input {
+        font-size: 18px;
+        color: $primary;
+        background: $bg-dark;
+        border: 1px solid $primary;
+        border-radius: 0;
+        &::placeholder {
+          color: $primary;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    button {
+      @include button;
+      margin: 1.875rem 0rem 8.125rem;
+      padding: .9375rem 4.375rem;
+      
+    }
+  }
+  .svg-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .career {
+    margin-top: 8.125rem;
+    .career-header {
+      text-align: center;
+      h5 {
+        @include gradient;
+      }
+    }
+    .career-positions {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      list-style-type: none;
+      border: none;
+      margin: 3.75rem 0;
+      button {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        position: relative;
+        padding: 0;
+        color: $primary;
+        .nav-link.active{
+          background-color: transparent;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          display:none;
+          width: 100%;
+          border:1px solid transparent;
+          background:
+          linear-gradient($bg-dark,$bg-dark) padding-box,
+          linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+        }
+        &.active{
+          @include gradient;
+          background-color: transparent;
+          &::after {
+            display: block;
+          }
+        }
+      }
+      li:not(:last-child) {
+      margin-right: 24px;
+      }
+    }
+    .job-listing {
+      ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 2.1875rem;
+          border-bottom: 1px solid #FFFFFF99;
+          .job-title {
+            span {
+              font-size: 30px;
+              font-weight: 700;
+            }
+            p {
+              font-weight: 500;
+            }
+          }
+          button {
+            border:1px solid transparent;
+            padding: 10px 50px;
+            background:
+            linear-gradient($bg-dark,$bg-dark) padding-box,
+            linear-gradient(to right, #20D4FE 0%, #B722FF 100%) border-box;
+            &:hover {
+              @include button;
+            }
+          }
+          &:not(:last-child){
+            margin-bottom: 35px;
+          }
+        }
+      }
+    }
+  }
+  .job-form {
+    margin-bottom: 8.125rem;
+    .job-form-header {
+      margin: 8.125rem 0 3.75rem;
+      text-align: center;
+      h5 {
+        @include gradient;
+      }
+    }
+    form {
+      padding: 0 3.75rem;
+      .form-group {
+        display: flex;
+        align-items: center;
+        &:not(:last-child){
+          margin-bottom: 3.75rem;
+        }
+        label {
+          font-size: 1.875rem;
+          font-weight: 500;
+          min-width: 290px;
+          margin-right: 2.8125rem;
+        }
+        input {
+          width: 100%;
+          height: 66px;
+          font-size: 1.125rem;
+          color: $primary;
+          background: $bg-dark;
+          border: 1px solid $primary;
+          border-radius: 6px;
+          &::placeholder {
+            color: $primary;
+          }
+        }
+        input[type='number'] {
+          appearance: textfield;
+        }
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button,
+        input[type='number']:hover::-webkit-inner-spin-button, 
+        input[type='number']:hover::-webkit-outer-spin-button {
+        appearance: none; 
+         margin: 0;
+        }
+        select {
+          width: 100%;
+          height: 66px;
+          font-size: 1.125rem;
+          color: $primary;
+          background: $bg-dark;
+          border: 1px solid $primary;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+      }
+      .file-upload-wrapper {
+        position: relative;
+        height: 190px;
+        width: 100%;
+        border: 1px dashed $primary;
+        border-radius: 6px;
+        input {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+        }
+        .file-upload-svg {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
+      }
+      .btn-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          @include button;
+          font-size: 1.5rem;
+          font-weight: 500;
+          padding: 15px 100px;
+          margin-top: 5rem;
+        }
+      }
+    }
+    .contact-us{
+      margin-top: 8.125rem;
+    }
+  }
+

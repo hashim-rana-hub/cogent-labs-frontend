@@ -1,0 +1,95 @@
+.consultation-page {
+  margin-bottom: 160px;
+  .consultation-header {
+    margin: 6.6875rem 0 5rem;
+    h1 {
+      text-align: center;
+      @include gradient;
+    }
+  }
+  .consultation-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 3.75rem;
+    .consultation-form {
+      padding: 0 1.875rem 0;
+      background: #1E1E1E;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .form-header {
+        padding: 2.5rem 0px 5.625rem;
+      }
+      .form-group {
+        &:not(:last-of-type) {
+          margin-bottom: 3.125rem;
+        }
+        .form-control {
+          font-size: 1.4rem;
+          color: $primary;
+          outline: none;
+          border: none;
+          border-radius: 0;
+          border-bottom: 2px solid $primary;
+          background-color: #1E1E1E;
+          padding: 0;
+          &::placeholder {
+            color: #A3A3A3;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+      button {
+        align-items: center;
+        @include button;
+        padding: 1.25rem 5.625rem;
+        margin: 5rem auto 10.625rem;
+      }
+    }
+    .our-contacts {
+      .contact-header {
+        margin-top: 40px; 
+        h5 {
+          margin-bottom: 20px;
+        }
+        h2 {
+          margin-bottom: 20px;
+        }
+      }
+      .contact-details {
+        margin: 70px 0 40px;
+        span {
+          display: block;
+          font-size: 20px;
+          font-weight: 500px;
+          &:not(:last-of-type){
+            margin-bottom: 16px;
+          }
+        }
+        ul {
+          display: flex;
+          list-style-type: none;
+          padding-left: 0;
+          margin: 40px 0 0;
+          li {
+            svg {
+              &:hover{
+                stop:first-child {
+                  stop-color: #1EBEE0;
+                }
+                stop:last-child {
+                  stop-color: #952491;
+                }
+              }
+            }
+            &:not(:last-child){
+              margin-right: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
