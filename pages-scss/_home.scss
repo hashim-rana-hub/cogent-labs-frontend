@@ -94,27 +94,27 @@
           }
         }
        .reviews {
-        text-align: start;
-        h6 {
-          margin-bottom: 5px;
-        }
-        ul {
-          display: flex;
-          padding-left: 0;
-        }
-        li {
-          list-style-type:  none;
-          &:not(:last-child){
-            margin-right: 5px;
+          text-align: start;
+          h6 {
+            margin-bottom: 5px;
+          }
+          ul {
+            display: flex;
+            padding-left: 0;
+            li {
+              list-style-type:  none;
+              &:not(:last-child){
+                margin-right: 5px;
+              }
+            }
+          }
+          .review-detail {
+            p {
+              max-width: 530px;
+              margin-bottom: 1rem;
+            }
           }
         }
-        .review-detail {
-          p {
-            max-width: 530px;
-            margin-bottom: 1rem;
-          }
-        }
-       }
       }
     }
   }
