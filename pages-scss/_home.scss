@@ -1,60 +1,121 @@
-.consultation {
+.home{
+  .consultation {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 8.75rem;
-  h1 {
-    color: $primary;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 1.4;
-    span {
-      @include gradient;
-      display: block;
-    }
+  margin-top: 6.6875rem;
   }
-  p {
-    @include p;
-    font-size: 24px;
-    max-width: 1040px;
+  h6 {
+    font-weight: 400;
+    max-width: 900px;
+    line-height: 2.5625rem;
     margin: 0px auto auto;
   }
   .btn {
     @include button;
+    font-size: 1.125rem;
     padding: 12px 20px;
-    margin: 35px auto 7.5rem;
+    margin: 2.1875rem auto 6.5rem;
   }
-}
-.images-grid {
-  display: grid;
-  justify-content: space-between;
-  grid-template-areas:
-  'item-1 item-2 item-3'
-  'item-4 item-2 item-5';
-  .item-1 { grid-area: item-1; }
-  .item-2 { grid-area: item-2; }
-  .item-3 { grid-area: item-3; }
-  .item-4 { grid-area: item-4; }
-  .item-5 { grid-area: item-5; }
-  .image{
-    &:hover {
-    opacity: 0.7;
+  .portfolio {
+    margin-top: 8.125rem;
+    .portfolio-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        margin: 0 auto 3rem !important;
+      }
+    }
+    .images-grid {
+      .item-2 {
+        img {
+          object-fit: cover;
+        }
+      }
     }
   }
-}
-.portfolio {
-  margin-top: 8.125rem;
-  .portfolio-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .testimonial {
+    margin-top: 7.6875rem;
+    text-align: center;
+    margin-right: 75px;
     h3 {
-      @include h-3;
-      @include gradient;
+      max-width: 525px;
     }
-    h4 {
-      @include h-4;
-      margin: 2.5rem 0rem 2.5rem;
+    .slider {
+      text-align: center;
+      .slider-flex {
+        display: flex;
+        column-gap: 3.75rem;
+        .slider-col {
+          display: flex;
+          margin-left: 1.875rem;
+          .review-persons-list {
+            .nav-item {
+              button {
+                background: none;
+                padding: 0;
+                &.active {
+                  background-color: transparent;
+                  .slider-image{
+                    .person {
+                      background:#2D2D2D ;
+                    }
+                  }
+                }
+                .slider-image {
+                  width: 420px;
+                  .person {
+                    display: flex;
+                    padding: 20px;
+                    background:#222222AD ;
+                    margin-bottom: 1.875rem;
+                    height: 107px;
+                    border-radius: 6px;
+                    .icon {
+                      margin-right: 20px;
+                    }
+                    .person-detail {
+                      text-align: start;
+                      color: $primary;
+                      span {
+                        font-size: 18px;
+                        font-weight: 700;
+                      }
+                      p {
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
+                    }
+                  }
+                }
+              }  
+            }
+          }
+        }
+       .reviews {
+          text-align: start;
+          h6 {
+            margin-bottom: 5px;
+          }
+          ul {
+            display: flex;
+            padding-left: 0;
+            li {
+              list-style-type:  none;
+              &:not(:last-child){
+                margin-right: 5px;
+              }
+            }
+          }
+          .review-detail {
+            p {
+              max-width: 530px;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
     }
   }
 }
